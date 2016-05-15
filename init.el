@@ -29,7 +29,6 @@
           'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-
 (defun nossralf/osx ()
   (let ((px (display-pixel-width))
         (py (display-pixel-height))
@@ -45,7 +44,16 @@
   (setq mouse-wheel-progressive-speed nil))
 (if (memq window-system '(mac ns)) (nossralf/osx))
 
+(electric-pair-mode t)
+(global-hl-line-mode)
+(delete-selection-mode t)
 
+(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook 'column-number-mode)
+(add-hook 'prog-mode-hook 'eldoc-mode)
+
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 
 ;; User interface
@@ -58,9 +66,7 @@
 (setq inhibit-startup-message t)
 (setq visible-bell t)
 
-(set-default-font "Inconsolata-g-11")
-
-
+(set-frame-font "Inconsolata-g-11")
 
 ;; Faster window actions
 (global-set-key (kbd "M-s") 'other-window)
@@ -79,13 +85,17 @@
 
 (setq-default indent-tabs-mode nil)
 
-
-
 (use-package exec-path-from-shell
   :ensure t
   :if (memq window-system '(mac ns))
   :config
   (exec-path-from-shell-initialize))
+
+(use-package flycheck
+  :ensure t)
+
+(use-package flycheck-rust
+  :ensure t)
 
 (use-package helm
   :ensure t
@@ -113,3 +123,34 @@
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode))
+
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-global-mode 1))
+
+(use-package popwin
+  :ensure t
+  :config
+  (popwin-mode 1))
+
+(use-package yaml-mode
+  :ensure t)
+
+(use-package toml-mode
+  :ensure t)
+
+(use-package rainbow-delimiters
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+
+(use-package move-text
+  :ensure t
+  :config
+  (move-text-default-bindings))
+
+(use-package neotree
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c d") 'neotree-toggle))
