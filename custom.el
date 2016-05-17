@@ -7,6 +7,8 @@
  '(gc-cons-threshold 100000000)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
+ '(neo-smart-open t)
+ '(neo-theme (quote nerd))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
