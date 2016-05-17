@@ -129,6 +129,10 @@
   :config
   (helm-projectile-on))
 
+(use-package helm-swoop
+  :ensure t
+  :bind (("C-c o" . helm-swoop)))
+
 (use-package move-text
   :ensure t
   :config
