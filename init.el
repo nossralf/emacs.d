@@ -90,15 +90,16 @@
 
 (use-package helm
   :ensure t
-  :diminish helm-mode
-  :init
-  (require 'helm-config)
-  (helm-mode)
-  :bind (("M-x" . helm-M-x)
-         ("C-x C-f" . helm-find-files))
   :config
+  (require 'helm-config)
   (setq helm-buffers-fuzzy-matching t
-        helm-recentf-fuzzy-match t))
+        helm-recentf-fuzzy-match t)
+  (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+  (global-set-key (kbd "C-x b") 'helm-mini)
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+  (global-set-key (kbd "C-x f") 'helm-recentf)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (helm-mode))
 
 (use-package racer
   :ensure t)
