@@ -66,6 +66,16 @@
 
 ;; --- Modes ---
 
+(use-package anzu
+  :ensure t
+  :config
+  (global-anzu-mode t))
+
+(use-package aggressive-indent
+  :ensure t
+  :config
+  (global-aggressive-indent-mode))
+
 (use-package better-defaults
   :ensure t)
 
