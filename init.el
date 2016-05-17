@@ -14,6 +14,8 @@
   :config
   (load-theme 'zenburn t))
 
+(set-frame-font "Inconsolata-g-11")
+
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
@@ -55,9 +57,6 @@
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
-
-(set-frame-font "Inconsolata-g-11")
 
 ;; Faster window actions
 (global-set-key (kbd "M-s") 'other-window)
