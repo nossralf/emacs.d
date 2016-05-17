@@ -84,13 +84,13 @@
 
 (use-package helm
   :ensure t
+  :bind (("C-x C-b" . helm-buffers-list)
+         ("C-x b" . helm-mini)
+         ("C-x C-f" . helm-find-files)
+         ("C-x f" . helm-recentf)
+         ("M-x" . helm-M-x))
   :config
   (require 'helm-config)
-  (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-  (global-set-key (kbd "C-x b") 'helm-mini)
-  (global-set-key (kbd "C-x C-f") 'helm-find-files)
-  (global-set-key (kbd "C-x f") 'helm-recentf)
-  (global-set-key (kbd "M-x") 'helm-M-x)
   (helm-mode))
 
 (use-package company
@@ -141,8 +141,7 @@
 
 (use-package neotree
   :ensure t
-  :config
-  (global-set-key (kbd "C-c d") 'neotree-toggle))
+  :bind (("C-c d" . neotree-toggle)))
 
 (use-package hardcore-mode
   :ensure t
