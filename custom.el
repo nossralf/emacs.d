@@ -14,6 +14,7 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa-stable" . "https://stable.melpa.org/packages/")
      ("melpa" . "https://melpa.org/packages/"))))
+ '(package-enable-at-startup nil)
  '(python-fill-docstring-style (quote symmetric))
  '(require-final-newline t))
 (custom-set-faces
