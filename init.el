@@ -48,6 +48,7 @@
 (electric-pair-mode t)
 (global-hl-line-mode)
 (delete-selection-mode t)
+(global-whitespace-mode)
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'column-number-mode)
