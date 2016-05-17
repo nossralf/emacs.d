@@ -86,8 +86,6 @@
   :ensure t
   :config
   (require 'helm-config)
-  (setq helm-buffers-fuzzy-matching t
-        helm-recentf-fuzzy-match t)
   (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
   (global-set-key (kbd "C-x b") 'helm-mini)
   (global-set-key (kbd "C-x C-f") 'helm-find-files)

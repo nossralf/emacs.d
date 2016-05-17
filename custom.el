@@ -5,6 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(fill-column 80)
  '(gc-cons-threshold 100000000)
+ '(helm-buffers-fuzzy-matching t)
+ '(helm-recentf-fuzzy-match t)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(neo-smart-open t)
