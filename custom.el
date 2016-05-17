@@ -19,7 +19,8 @@
  '(package-enable-at-startup nil)
  '(projectile-completion-system (quote helm))
  '(python-fill-docstring-style (quote symmetric))
- '(require-final-newline t))
+ '(require-final-newline t)
+ '(whitespace-style (quote (face empty lines-tail trailing))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
