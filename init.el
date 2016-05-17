@@ -14,8 +14,6 @@
   :config
   (load-theme 'zenburn t))
 
-(set-frame-font "Inconsolata-g-11")
-
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
