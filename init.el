@@ -126,7 +126,9 @@
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode)
-  (add-hook 'before-save-hook #'rustfmt-format-buffer))
+  (add-hook 'rust-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook #'rustfmt-format-buffer nil 'local))))
 
 (use-package projectile
   :ensure t
