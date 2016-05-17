@@ -7,6 +7,7 @@
  '(gc-cons-threshold 100000000)
  '(helm-buffers-fuzzy-matching t)
  '(helm-recentf-fuzzy-match t)
+ '(helm-split-window-in-side-p t)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(neo-smart-open t)
