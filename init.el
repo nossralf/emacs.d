@@ -124,6 +124,11 @@
   (require 'helm-config)
   (helm-mode))
 
+(use-package helm-projectile
+  :ensure t
+  :config
+  (helm-projectile-on))
+
 (use-package move-text
   :ensure t
   :config
