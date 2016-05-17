@@ -15,6 +15,7 @@
      ("melpa-stable" . "https://stable.melpa.org/packages/")
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-enable-at-startup nil)
+ '(projectile-completion-system (quote helm))
  '(python-fill-docstring-style (quote symmetric))
  '(require-final-newline t))
 (custom-set-faces
