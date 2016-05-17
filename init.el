@@ -101,10 +101,14 @@
   (global-set-key (kbd "M-x") 'helm-M-x)
   (helm-mode))
 
+(use-package company
+  :ensure t
+  :pin melpa-stable)
+
 (use-package racer
   :ensure t)
 
-(use-package company
+(use-package rustfmt
   :ensure t)
 
 (use-package rust-mode
@@ -114,7 +118,8 @@
   (setq racer-rust-src-path "/Users/nossralf/.rust-source/stable/src")
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
-  (add-hook 'racer-mode-hook #'company-mode))
+  (add-hook 'racer-mode-hook #'company-mode)
+  (add-hook 'before-save-hook #'rustfmt-format-buffer))
 
 (use-package projectile
   :ensure t
