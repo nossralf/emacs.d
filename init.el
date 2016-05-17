@@ -147,3 +147,11 @@
   :ensure t
   :config
   (global-set-key (kbd "C-c d") 'neotree-toggle))
+
+(use-package hardcore-mode
+  :ensure t
+  :init
+  (setq too-hardcore-backspace t)
+  (setq too-hardcore-return t)
+  :config
+  (global-hardcore-mode))
