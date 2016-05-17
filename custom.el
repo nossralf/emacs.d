@@ -4,6 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(fill-column 80)
+ '(inhibit-startup-echo-area-message "")
+ '(inhibit-startup-screen t)
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
