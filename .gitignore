@@ -12,3 +12,5 @@ projectile.cache
 recentf
 .cask
 helm-history
+auto-save-list
+ido.last
