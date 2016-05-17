@@ -66,18 +66,22 @@
 
 ;; --- Modes ---
 
-(use-package anzu
-  :ensure t
-  :config
-  (global-anzu-mode t))
-
 (use-package aggressive-indent
   :ensure t
   :config
   (global-aggressive-indent-mode))
 
+(use-package anzu
+  :ensure t
+  :config
+  (global-anzu-mode t))
+
 (use-package better-defaults
   :ensure t)
+
+(use-package company
+  :ensure t
+  :pin melpa-stable)
 
 (use-package exec-path-from-shell
   :ensure t
@@ -94,6 +98,14 @@
 
 (use-package flycheck-rust
   :ensure t)
+
+(use-package hardcore-mode
+  :ensure t
+  :init
+  (setq too-hardcore-backspace t)
+  (setq too-hardcore-return t)
+  :config
+  (global-hardcore-mode))
 
 (use-package helm
   :ensure t
@@ -112,15 +124,32 @@
   (require 'helm-config)
   (helm-mode))
 
-(use-package company
+(use-package move-text
   :ensure t
-  :pin melpa-stable)
+  :config
+  (move-text-default-bindings))
+
+(use-package neotree
+  :ensure t
+  :bind (("C-c d" . neotree-toggle)))
+
+(use-package popwin
+  :ensure t
+  :config
+  (popwin-mode 1))
+
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-global-mode 1))
 
 (use-package racer
   :ensure t)
 
-(use-package rustfmt
-  :ensure t)
+(use-package rainbow-delimiters
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 (use-package rust-mode
   :ensure t
@@ -134,40 +163,11 @@
             (lambda ()
               (add-hook 'before-save-hook #'rustfmt-format-buffer nil 'local))))
 
-(use-package projectile
-  :ensure t
-  :config
-  (projectile-global-mode 1))
-
-(use-package popwin
-  :ensure t
-  :config
-  (popwin-mode 1))
-
-(use-package yaml-mode
+(use-package rustfmt
   :ensure t)
 
 (use-package toml-mode
   :ensure t)
 
-(use-package rainbow-delimiters
-  :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
-
-(use-package move-text
-  :ensure t
-  :config
-  (move-text-default-bindings))
-
-(use-package neotree
-  :ensure t
-  :bind (("C-c d" . neotree-toggle)))
-
-(use-package hardcore-mode
-  :ensure t
-  :init
-  (setq too-hardcore-backspace t)
-  (setq too-hardcore-return t)
-  :config
-  (global-hardcore-mode))
+(use-package yaml-mode
+  :ensure t)
