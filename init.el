@@ -41,7 +41,11 @@
     (add-to-list 'default-frame-alist (cons 'width tx))
     (add-to-list 'default-frame-alist (cons 'height ty)))
   (setq mouse-wheel-scroll-amount '(1))
-  (setq mouse-wheel-progressive-speed nil))
+  (setq mouse-wheel-progressive-speed nil)
+  (setq mac-option-key-is-meta nil)
+  (setq mac-command-key-is-meta t)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier nil))
 (if (memq window-system '(mac ns)) (nossralf/osx))
 
 (electric-pair-mode t)
@@ -66,12 +70,6 @@
 (global-set-key (kbd "M-2") 'split-window-below)
 (global-set-key (kbd "M-3") 'split-window-right)
 (global-set-key (kbd "M-0") 'delete-window)
-
-;; Mac keys
-(setq mac-option-key-is-meta nil)
-(setq mac-command-key-is-meta t)
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier nil)
 
 ;; --- Modes ---
 
