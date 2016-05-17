@@ -55,14 +55,6 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-
-;; User interface
-(if (fboundp 'tool-bar-mode)
-    (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode)
-    (menu-bar-mode -1))
-(if (fboundp 'scroll-bar-mode)
-    (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 (setq visible-bell t)
 
@@ -83,7 +75,8 @@
 
 ;; --- Modes ---
 
-(setq-default indent-tabs-mode nil)
+(use-package better-defaults
+  :ensure t)
 
 (use-package exec-path-from-shell
   :ensure t
