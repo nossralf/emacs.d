@@ -115,7 +115,7 @@
   :ensure t
   :mode "\\.rs\\'"
   :config
-  (setq racer-rust-src-path "/Users/nossralf/.rust-source/stable/src")
+  (setq racer-rust-src-path "~/.rust-source/stable/src")
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode)
