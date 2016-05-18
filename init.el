@@ -17,13 +17,13 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; Use UTF-8 all the time
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
 (setq ring-bell-function 'ignore)
-(add-hook 'before-save-hook
-          'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (defun nossralf/osx-specific ()
@@ -38,8 +38,10 @@
     (setq initial-frame-alist '((top . 2) (left . 2)))
     (add-to-list 'default-frame-alist (cons 'width tx))
     (add-to-list 'default-frame-alist (cons 'height ty)))
+  ;; More reasonable scroll behavior
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil)
+  ;; Rejigger they keys to my liking
   (setq mac-option-key-is-meta nil)
   (setq mac-command-key-is-meta t)
   (setq mac-command-modifier 'meta)
