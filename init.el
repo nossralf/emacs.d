@@ -190,5 +190,10 @@
 (use-package toml-mode
   :ensure t)
 
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
+
 (use-package yaml-mode
   :ensure t)
