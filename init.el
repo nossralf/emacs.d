@@ -26,7 +26,8 @@
           'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(defun nossralf/osx ()
+(defun nossralf/osx-specific ()
+  "OS X-specific setup"
   (let ((px (display-pixel-width))
         (py (display-pixel-height))
         (fx (frame-char-width))
@@ -43,7 +44,16 @@
   (setq mac-command-key-is-meta t)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil))
-(if (memq window-system '(mac ns)) (nossralf/osx))
+
+(defun nossralf/linux-specific ()
+  "Linux-specific setup"
+  ;; For some reason the font size on Linux is rather huge. Make it smaller.
+  (set-face-attribute 'default nil :height 90))
+
+;; Perform platform-specific setup
+(cond
+ ((memq window-system '(x)) (nossralf/linux-specific))
+ ((memq window-system '(mac ns)) (nossralf/osx-specific)))
 
 (electric-pair-mode t)
 (global-hl-line-mode)
