@@ -41,7 +41,7 @@
   ;; More reasonable scroll behavior
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil)
-  ;; Rejigger they keys to my liking
+  ;; Rejigger the keys to my liking
   (setq mac-option-key-is-meta nil)
   (setq mac-command-key-is-meta t)
   (setq mac-command-modifier 'meta)
