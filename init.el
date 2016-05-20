@@ -187,6 +187,12 @@
 (use-package rustfmt
   :ensure t)
 
+(use-package smart-mode-line
+  :ensure t
+  :config
+  (setq sml/theme 'respectful)
+  (sml/setup))
+
 (use-package toml-mode
   :ensure t)
 
