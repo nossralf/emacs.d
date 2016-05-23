@@ -154,6 +154,14 @@
   :ensure t
   :bind (("C-c d" . neotree-toggle)))
 
+(use-package paredit
+  :ensure t
+  :bind (:map paredit-mode-map
+              ("M-{" . paredit-wrap-curly)
+              ("M-[" . paredit-wrap-square))
+  :config
+  (add-hook 'emacs-lisp-mode-hook 'paredit-mode))
+
 (use-package popwin
   :ensure t
   :config
