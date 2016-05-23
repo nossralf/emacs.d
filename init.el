@@ -108,6 +108,11 @@
 (use-package flycheck
   :ensure t)
 
+(use-package flycheck-color-mode-line
+  :ensure t
+  :config
+  (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+
 (use-package flycheck-rust
   :ensure t)
 
