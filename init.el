@@ -92,8 +92,7 @@
   :ensure t)
 
 (use-package company
-  :ensure t
-  :pin melpa-stable)
+  :ensure t)
 
 (use-package exec-path-from-shell
   :ensure t
