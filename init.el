@@ -105,7 +105,9 @@
   :bind (("C-=" . er/expand-region)))
 
 (use-package flycheck
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (use-package flycheck-color-mode-line
   :ensure t
