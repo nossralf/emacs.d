@@ -142,6 +142,9 @@
   (require 'helm-config)
   (helm-mode))
 
+(use-package helm-ag
+  :ensure t)
+
 (use-package helm-projectile
   :ensure t
   :config
