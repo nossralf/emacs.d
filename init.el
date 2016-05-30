@@ -156,8 +156,8 @@
 
 (use-package move-text
   :ensure t
-  :config
-  (move-text-default-bindings))
+  :bind (("M-P" . move-text-up)
+         ("M-N" . move-text-down)))
 
 (use-package neotree
   :ensure t
