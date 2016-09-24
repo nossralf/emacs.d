@@ -93,6 +93,9 @@
 (use-package better-defaults
   :ensure t)
 
+(use-package cargo
+  :ensure t)
+
 (use-package company
   :ensure t)
 
@@ -205,6 +208,7 @@
   :config
   (setq racer-rust-src-path "~/.rust-source/stable/src")
   (add-hook 'rust-mode-hook #'racer-mode)
+  (add-hook 'rust-mode-hook #'cargo-minor-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode)
   (add-hook 'rust-mode-hook
