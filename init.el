@@ -161,6 +161,9 @@
   :config
   (add-hook 'prog-mode-hook 'highlight-symbol-mode))
 
+(use-package magit
+  :ensure t)
+
 (use-package move-text
   :ensure t
   :bind (("M-P" . move-text-up)
