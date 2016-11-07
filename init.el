@@ -27,7 +27,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (defun nossralf/osx-specific ()
-  "OS X-specific setup"
+  "OS X-specific setup."
   (let ((px (display-pixel-width))
         (py (display-pixel-height))
         (fx (frame-char-width))
@@ -48,7 +48,7 @@
   (setq mac-option-modifier nil))
 
 (defun nossralf/linux-specific ()
-  "Linux-specific setup"
+  "Linux-specific setup."
   ;; For some reason the font size on Linux is rather huge. Make it smaller.
   (set-face-attribute 'default nil :height 90))
 
