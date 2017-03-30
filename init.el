@@ -214,10 +214,7 @@
   (add-hook 'racer-mode-hook #'company-mode)
   (add-hook 'rust-mode-hook
             (lambda ()
-              (add-hook 'before-save-hook #'rustfmt-format-buffer nil 'local))))
-
-(use-package rustfmt
-  :ensure t)
+              (add-hook 'before-save-hook #'rust-format-buffer nil 'local))))
 
 (use-package smart-mode-line
   :ensure t
