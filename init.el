@@ -109,6 +109,9 @@
   :ensure t
   :bind (("C-=" . er/expand-region)))
 
+(use-package fish-mode
+  :ensure t)
+
 (use-package flycheck
   :ensure t
   :config
