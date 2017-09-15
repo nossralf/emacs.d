@@ -26,18 +26,10 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(defun nossralf/osx-specific ()
-  "OS X-specific setup."
-  (let ((px (display-pixel-width))
-        (py (display-pixel-height))
-        (fx (frame-char-width))
-        (fy (frame-char-height))
-        tx ty)
-    (setq tx (- (/ px fx) 7))
-    (setq ty (- (/ py fy) 4))
-    (setq initial-frame-alist '((top . 2) (left . 2)))
-    (add-to-list 'default-frame-alist (cons 'width tx))
-    (add-to-list 'default-frame-alist (cons 'height ty)))
+(defun nossralf/macos-specific ()
+  "macOS-specific setup."
+  ;; Maximize window
+  (toggle-frame-maximized)
   ;; More reasonable scroll behavior
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil)
@@ -55,7 +47,7 @@
 ;; Perform platform-specific setup
 (cond
  ((memq window-system '(x)) (nossralf/linux-specific))
- ((memq window-system '(mac ns)) (nossralf/osx-specific)))
+ ((memq window-system '(mac ns)) (nossralf/macos-specific)))
 
 (electric-pair-mode t)
 (global-hl-line-mode)
