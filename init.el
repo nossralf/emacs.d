@@ -83,7 +83,7 @@
 (use-package aggressive-indent
   :ensure t
   :config
-  (global-aggressive-indent-mode))
+  (add-hook 'emacs-lisp-mode-hook 'aggressive-indent-mode))
 
 (use-package anzu
   :ensure t
