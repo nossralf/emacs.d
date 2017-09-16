@@ -156,6 +156,12 @@
 (use-package helm-ag
   :ensure t)
 
+(use-package helm-flycheck
+  :ensure t
+  :config
+  (eval-after-load 'flycheck
+    '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck)))
+
 (use-package helm-projectile
   :ensure t
   :config
