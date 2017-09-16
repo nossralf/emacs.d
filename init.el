@@ -107,7 +107,7 @@
 (use-package flycheck
   :ensure t
   :config
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+  (add-hook 'after-init-hook 'global-flycheck-mode))
 
 (use-package flycheck-color-mode-line
   :ensure t
@@ -210,14 +210,14 @@
   :mode "\\.rs\\'"
   :config
   (setq racer-rust-src-path "~/.rust-source/stable/src")
-  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-  (add-hook 'rust-mode-hook #'racer-mode)
-  (add-hook 'rust-mode-hook #'cargo-minor-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode)
-  (add-hook 'racer-mode-hook #'company-mode)
+  (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
+  (add-hook 'rust-mode-hook 'racer-mode)
+  (add-hook 'rust-mode-hook 'cargo-minor-mode)
+  (add-hook 'racer-mode-hook 'eldoc-mode)
+  (add-hook 'racer-mode-hook 'company-mode)
   (add-hook 'rust-mode-hook
             (lambda ()
-              (add-hook 'before-save-hook #'rust-format-buffer nil 'local))))
+              (add-hook 'before-save-hook 'rust-format-buffer nil 'local))))
 
 (use-package smart-mode-line
   :ensure t
