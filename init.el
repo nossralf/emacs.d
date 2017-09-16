@@ -138,6 +138,7 @@
 (use-package helm
   :ensure t
   :bind (("C-x C-b" . helm-buffers-list)
+         ("C-x C-d" . helm-browse-project)
          ("C-x b" . helm-mini)
          ("C-x C-f" . helm-find-files)
          ("C-x f" . helm-recentf)
