@@ -125,6 +125,11 @@
   :config
   (global-hardcore-mode))
 
+(use-package highlight-symbol
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'highlight-symbol-mode))
+
 (use-package git-commit
   :ensure t
   :config
