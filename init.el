@@ -200,7 +200,7 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-global-mode 1))
+  (projectile-mode t))
 
 (use-package racer
   :ensure t)
