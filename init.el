@@ -125,6 +125,11 @@
   :config
   (global-hardcore-mode))
 
+(use-package git-commit
+  :ensure t
+  :config
+  (add-hook 'git-commit-mode-hook 'flyspell-mode))
+
 (use-package helm
   :ensure t
   :bind (("C-x C-b" . helm-buffers-list)
