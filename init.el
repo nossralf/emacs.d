@@ -177,7 +177,9 @@
   (add-hook 'prog-mode-hook 'highlight-symbol-mode))
 
 (use-package magit
-  :ensure t)
+  :ensure t
+  :bind (("M-g s" . magit-status)
+         ("M-g d" . magit-diff)))
 
 (use-package markdown-mode
   :ensure t)
