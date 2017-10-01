@@ -25,7 +25,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (helm-flycheck highlight-symbol git-commit-mode fish-mode markdown-mode yaml-mode which-key toml-mode smart-mode-line rust-mode rainbow-delimiters racer projectile popwin paredit neotree move-text magit highlight-symbol helm-swoop helm-projectile helm-ag helm hardcore-mode flycheck-rust flycheck-color-mode-line flycheck expand-region exec-path-from-shell company cargo better-defaults anzu aggressive-indent zenburn-theme use-package)))
+    (aggressive-indent anzu better-defaults cargo company exec-path-from-shell expand-region fish-mode flycheck flycheck-color-mode-line flycheck-rust git-commit hardcore-mode helm helm-ag helm-flycheck helm-projectile helm-swoop highlight-symbol highlight-symbol magit markdown-mode move-text neotree paredit popwin projectile racer rainbow-delimiters rust-mode smart-mode-line toml-mode use-package which-key yaml-mode zenburn-theme)))
  '(projectile-completion-system (quote helm))
  '(python-fill-docstring-style (quote symmetric))
  '(require-final-newline t)
