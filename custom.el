@@ -6,7 +6,7 @@
  '(custom-safe-themes
    (quote
     ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
- '(fill-column 80)
+ '(fill-column 79)
  '(gc-cons-threshold 100000000)
  '(helm-buffers-fuzzy-matching t)
  '(helm-move-to-line-cycle-in-source t)
