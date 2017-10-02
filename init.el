@@ -133,7 +133,10 @@
 (use-package git-commit
   :ensure t
   :config
-  (add-hook 'git-commit-mode-hook 'flyspell-mode))
+  (add-hook 'git-commit-mode-hook 'flyspell-mode)
+  (add-hook 'git-commit-mode-hook
+            (lambda ()
+              (setq fill-column 72))))
 
 (use-package helm
   :ensure t
