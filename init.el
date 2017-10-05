@@ -95,6 +95,8 @@
 (use-package exec-path-from-shell
   :ensure t
   :if (memq window-system '(mac ns))
+  :init
+  (setq exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
   :config
   (exec-path-from-shell-initialize))
 
