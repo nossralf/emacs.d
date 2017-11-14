@@ -156,6 +156,8 @@
   ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
   (global-set-key (kbd "C-c h") 'helm-command-prefix)
   (global-unset-key (kbd "C-x c"))
+  (when (executable-find "rg")
+    (setq helm-grep-ag-command "rg --color=always --smart-case --no-heading --line-number %s %s %s"))
   (require 'helm-config)
   (helm-mode))
 
