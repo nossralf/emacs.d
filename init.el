@@ -224,6 +224,9 @@
   :config
   (projectile-mode t))
 
+(use-package puppet-mode
+  :ensure t)
+
 (use-package racer
   :ensure t)
 
