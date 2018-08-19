@@ -75,8 +75,7 @@
 
 (use-package aggressive-indent
   :ensure t
-  :config
-  (add-hook 'emacs-lisp-mode-hook 'aggressive-indent-mode))
+  :hook (emacs-lisp-mode . aggressive-indent-mode))
 
 (use-package anzu
   :ensure t
@@ -117,8 +116,7 @@
 
 (use-package flycheck-color-mode-line
   :ensure t
-  :config
-  (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+  :hook (flycheck-mode . flycheck-color-mode-line-mode))
 
 (use-package flycheck-rust
   :ensure t)
@@ -133,8 +131,7 @@
 
 (use-package highlight-symbol
   :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'highlight-symbol-mode))
+  :hook (prog-mode . highlight-symbol-mode))
 
 (use-package git-commit
   :ensure t
@@ -184,8 +181,7 @@
 
 (use-package highlight-symbol
   :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'highlight-symbol-mode))
+  :hook (prog-mode . highlight-symbol-mode))
 
 (use-package magit
   :ensure t
@@ -209,8 +205,7 @@
   :bind (:map paredit-mode-map
               ("M-{" . paredit-wrap-curly)
               ("M-[" . paredit-wrap-square))
-  :config
-  (add-hook 'emacs-lisp-mode-hook 'paredit-mode))
+  :hook (emacs-lisp-mode . paredit-mode))
 
 (use-package popwin
   :ensure t
@@ -232,8 +227,7 @@
 
 (use-package rainbow-delimiters
   :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+  :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package rust-mode
   :ensure t
