@@ -183,8 +183,9 @@
 
 (use-package magit
   :ensure t
-  :bind (("M-g s" . magit-status)
-         ("M-g d" . magit-diff)))
+  :bind (("M-g b" . magit-blame)
+         ("M-g d" . magit-diff)
+         ("M-g s" . magit-status)))
 
 (use-package markdown-mode
   :ensure t)
