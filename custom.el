@@ -6,6 +6,7 @@
  '(custom-safe-themes
    (quote
     ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
+ '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "PKG_CONFIG_PATH")))
  '(fill-column 79)
  '(gc-cons-threshold 100000000)
  '(helm-buffers-fuzzy-matching t)
@@ -13,6 +14,7 @@
  '(helm-recentf-fuzzy-match t)
  '(helm-scroll-amount 8)
  '(helm-split-window-in-side-p t)
+ '(helm-split-window-inside-p t)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(neo-smart-open t)
@@ -29,6 +31,9 @@
  '(projectile-completion-system (quote helm))
  '(python-fill-docstring-style (quote symmetric))
  '(require-final-newline t)
+ '(sml/theme (quote respectful))
+ '(too-hardcore-backspace t)
+ '(too-hardcore-return t)
  '(whitespace-style (quote (face empty lines-tail trailing))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

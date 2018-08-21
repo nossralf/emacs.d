@@ -97,8 +97,8 @@
 (use-package exec-path-from-shell
   :ensure t
   :if (memq window-system '(mac ns))
-  :init
-  (setq exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
+  :custom
+  (exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
   :config
   (exec-path-from-shell-initialize))
 
@@ -123,9 +123,9 @@
 
 (use-package hardcore-mode
   :ensure t
-  :init
-  (setq too-hardcore-backspace t)
-  (setq too-hardcore-return t)
+  :custom
+  (too-hardcore-backspace t)
+  (too-hardcore-return t)
   :config
   (global-hardcore-mode))
 
@@ -243,8 +243,9 @@
 
 (use-package smart-mode-line
   :ensure t
+  :custom
+  (sml/theme 'respectful)
   :config
-  (setq sml/theme 'respectful)
   (sml/setup))
 
 (use-package toml-mode
