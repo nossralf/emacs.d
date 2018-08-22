@@ -15,3 +15,4 @@ helm-history
 auto-save-list
 ido.last
 network-security.data
+session.*
