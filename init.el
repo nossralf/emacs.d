@@ -189,7 +189,9 @@
          ("M-g s" . magit-status)))
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :custom
+  (markdown-command "pandoc --from commonmark --to html5 --highlight-style pygments --standalone"))
 
 (use-package move-text
   :ensure t

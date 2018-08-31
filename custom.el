@@ -17,6 +17,8 @@
  '(helm-split-window-inside-p t)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
+ '(markdown-command
+   "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
  '(neo-smart-open t)
  '(neo-theme (quote nerd))
  '(package-archives
