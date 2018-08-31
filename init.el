@@ -42,6 +42,7 @@
 
 (defun nossralf/linux-specific ()
   "Linux-specific setup."
+  (toggle-frame-maximized)
   ;; For some reason the font size on Linux is rather huge. Make it smaller.
   (set-face-attribute 'default nil :height 90))
 
