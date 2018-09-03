@@ -46,10 +46,23 @@
   ;; For some reason the font size on Linux is rather huge. Make it smaller.
   (set-face-attribute 'default nil :height 90))
 
+(defun nossralf/linux/emacsclient-frame-hook (frame)
+  "A hook to set an emacsclient-created frame to be maximized and
+have the correct face attribute settings"
+  (when (display-graphic-p frame)
+    (select-frame frame)
+    (toggle-frame-maximized)
+    (set-face-attribute 'default nil :height 90)))
+
 ;; Perform platform-specific setup
 (cond
- ((memq window-system '(x)) (nossralf/linux-specific))
- ((memq window-system '(mac ns)) (nossralf/macos-specific)))
+ ((and (string= system-type "gnu/linux") (daemonp))
+  (add-hook 'after-make-frame-functions
+            'nossralf/linux/emacsclient-frame-hook))
+ ((memq window-system '(x))
+  (nossralf/linux-specific))
+ ((memq window-system '(mac ns))
+  (nossralf/macos-specific)))
 
 (electric-pair-mode t)
 (global-hl-line-mode)
