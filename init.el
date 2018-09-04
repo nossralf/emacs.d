@@ -10,11 +10,6 @@
   (require 'use-package))
 (setq use-package-verbose t)
 
-(use-package zenburn-theme
-  :ensure t
-  :config
-  (load-theme 'zenburn t))
-
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
@@ -281,3 +276,8 @@ have the correct face attribute settings"
   :hook (prog-mode . yas-minor-mode)
   :config
   (yas-reload-all))
+
+(use-package zenburn-theme
+  :ensure t
+  :config
+  (load-theme 'zenburn t))
