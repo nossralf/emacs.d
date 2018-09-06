@@ -22,7 +22,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(defun nossralf/macos-specific ()
+(defun nossralf/macos ()
   "macOS-specific setup."
   ;; Maximize window
   (toggle-frame-maximized)
@@ -35,7 +35,7 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil))
 
-(defun nossralf/linux-specific ()
+(defun nossralf/linux/x ()
   "Linux-specific setup."
   (toggle-frame-maximized)
   ;; For some reason the font size on Linux is rather huge. Make it smaller.
@@ -55,9 +55,9 @@ have the correct face attribute settings"
   (add-hook 'after-make-frame-functions
             'nossralf/linux/emacsclient-frame-hook))
  ((memq window-system '(x))
-  (nossralf/linux-specific))
+  (nossralf/linux/x))
  ((memq window-system '(mac ns))
-  (nossralf/macos-specific)))
+  (nossralf/macos)))
 
 (electric-pair-mode t)
 (global-hl-line-mode)
