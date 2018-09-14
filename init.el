@@ -194,6 +194,7 @@ have the correct face attribute settings"
   :ensure t
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)
+         ("M-g l" . magit-log)
          ("M-g s" . magit-status)))
 
 (use-package markdown-mode
