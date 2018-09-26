@@ -9,6 +9,7 @@
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "PKG_CONFIG_PATH")))
  '(fill-column 79)
  '(gc-cons-threshold 100000000)
+ '(git-commit-fill-column 72)
  '(helm-buffers-fuzzy-matching t)
  '(helm-move-to-line-cycle-in-source t)
  '(helm-recentf-fuzzy-match t)

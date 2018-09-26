@@ -142,13 +142,20 @@ have the correct face attribute settings"
   :ensure t
   :hook (prog-mode . highlight-symbol-mode))
 
+(defun nossralf/topic-branch-commit-message ()
+  "Set the commit message to begin with the Jira issue number for topic branches."
+  (let ((buffer-contents (buffer-substring-no-properties (point-min) (point-max))))
+    (save-match-data
+      (if (string-match "On branch topic-\\([A-Z]+-[0-9]+\\)" buffer-contents)
+          (insert (match-string 1 buffer-contents) " ")))))
+
 (use-package git-commit
   :ensure t
+  :custom
+  (git-commit-fill-column 72)
   :config
   (add-hook 'git-commit-mode-hook 'flyspell-mode)
-  (add-hook 'git-commit-mode-hook
-            (lambda ()
-              (setq fill-column 72))))
+  (add-hook 'git-commit-setup-hook 'nossralf/topic-branch-commit-message))
 
 (use-package helm
   :ensure t
