@@ -218,6 +218,10 @@ have the correct face attribute settings"
   :ensure t
   :bind (("C-c d" . neotree-toggle)))
 
+(use-package nxml-mode
+  :config
+  (setq nxml-child-indent 4))
+
 (use-package paredit
   :ensure t
   :bind (:map paredit-mode-map
