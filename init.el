@@ -143,11 +143,14 @@ have the correct face attribute settings"
   :hook (prog-mode . highlight-symbol-mode))
 
 (defun nossralf/topic-branch-commit-message ()
-  "Set the commit message to begin with the Jira issue number for topic branches."
-  (let ((buffer-contents (buffer-substring-no-properties (point-min) (point-max))))
-    (when (string-match "On branch topic-\\([A-Z]+-[0-9]+\\)" buffer-contents)
-      (goto-char 0)
-      (insert (match-string 1 buffer-contents) " "))))
+  "Make the commit message begin with the Jira issue for topic branches."
+  (let* ((buffer-contents (buffer-substring-no-properties (point-min) (point-max)))
+         (found-topic-branch (string-match "On branch topic-\\([A-Z]+-[0-9]+\\)" buffer-contents))
+         (issue-name (match-string 1 buffer-contents)))
+    (when found-topic-branch
+      (unless (string-prefix-p issue-name buffer-contents)
+        (goto-char 0)
+        (insert (match-string 1 buffer-contents) " ")))))
 
 (use-package git-commit
   :ensure t
