@@ -105,7 +105,7 @@ have the correct face attribute settings"
 
 (use-package exec-path-from-shell
   :ensure t
-  :if (memq window-system '(mac ns))
+  :if (memq window-system '(mac ns x))
   :custom
   (exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
   :config
