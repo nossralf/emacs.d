@@ -23,7 +23,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (defun nossralf/macos ()
-  "macOS-specific setup."
+  "Run macOS-specific setup."
   ;; Maximize window
   (toggle-frame-maximized)
   ;; More reasonable scroll behavior
@@ -36,14 +36,12 @@
   (setq mac-option-modifier nil))
 
 (defun nossralf/linux/x ()
-  "Linux-specific setup."
+  "Run Linux-specific setup."
   (toggle-frame-maximized)
-  ;; For some reason the font size on Linux is rather huge. Make it smaller.
   (set-face-attribute 'default nil :height 90))
 
 (defun nossralf/linux/emacsclient-frame-hook (frame)
-  "A hook to set an emacsclient-created frame to be maximized and
-have the correct face attribute settings"
+  "A hook to set an emacsclient-created FRAME to be maximized and have the correct face attribute settings."
   (when (display-graphic-p frame)
     (select-frame frame)
     (toggle-frame-maximized)
