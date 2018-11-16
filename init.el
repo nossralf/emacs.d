@@ -148,7 +148,7 @@
     (when found-topic-branch
       (unless (string-prefix-p issue-name buffer-contents)
         (goto-char 0)
-        (insert (match-string 1 buffer-contents) " ")))))
+        (insert issue-name " ")))))
 
 (use-package git-commit
   :ensure t
