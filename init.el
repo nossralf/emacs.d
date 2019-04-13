@@ -252,6 +252,9 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
+(use-package rjsx-mode
+  :ensure t)
+
 (use-package rust-mode
   :ensure t
   :mode "\\.rs\\'"
