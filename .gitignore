@@ -16,3 +16,5 @@ auto-save-list
 ido.last
 network-security.data
 session.*
+transient/
+tramp
