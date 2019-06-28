@@ -257,7 +257,9 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package rjsx-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq js2-basic-offset 2))
 
 (use-package rust-mode
   :ensure t
