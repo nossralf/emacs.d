@@ -170,7 +170,8 @@
          ("C-x C-f" . helm-find-files)
          ("C-x f" . helm-recentf)
          ("M-x" . helm-M-x)
-         ("C-c C-x" . execute-extended-command))
+         ("C-c C-x" . execute-extended-command)
+         ("C-c o" . helm-occur))
   :config
   ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
   ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
@@ -193,10 +194,6 @@
 
 (use-package helm-rg
   :ensure t)
-
-(use-package helm-swoop
-  :ensure t
-  :bind (("C-c o" . helm-swoop)))
 
 (use-package highlight-symbol
   :ensure t
