@@ -258,11 +258,16 @@
   :config
   (setq js2-basic-offset 2))
 
+(defun nossralf/read-rust-src-path (toolchain)
+  "Figure out the source code location for the given Rust TOOLCHAIN."
+  (let ((cmd (format "rustc +%s --print sysroot" (symbol-name toolchain))))
+    (concat (string-trim (shell-command-to-string cmd)) "/lib/rustlib/src/rust/src")))
+
 (use-package rust-mode
   :ensure t
   :mode "\\.rs\\'"
   :config
-  (setq racer-rust-src-path "~/.rust-source/stable/src")
+  (setq racer-rust-src-path (nossralf/read-rust-src-path 'stable))
   (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
   (add-hook 'rust-mode-hook 'racer-mode)
   (add-hook 'rust-mode-hook 'cargo-minor-mode)
