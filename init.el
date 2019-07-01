@@ -282,6 +282,9 @@
 (use-package toml-mode
   :ensure t)
 
+(use-package undo-tree
+  :ensure t)
+
 (use-package which-key
   :ensure t
   :config
