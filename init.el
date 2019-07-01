@@ -132,6 +132,9 @@
   :ensure t
   :after magit)
 
+(use-package groovy-mode
+  :ensure t)
+
 (use-package hardcore-mode
   :ensure t
   :custom
