@@ -293,7 +293,9 @@
   :ensure t)
 
 (use-package undo-tree
-  :ensure t)
+  :ensure t
+  :config
+  (global-undo-tree-mode))
 
 (use-package which-key
   :ensure t
