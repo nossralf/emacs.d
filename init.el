@@ -207,7 +207,9 @@
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)
          ("M-g l" . magit-log)
-         ("M-g s" . magit-status)))
+         ("M-g s" . magit-status))
+  :custom
+  (magit-diff-refine-hunk t))
 
 (use-package markdown-mode
   :ensure t

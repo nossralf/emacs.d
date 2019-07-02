@@ -18,6 +18,7 @@
  '(helm-split-window-inside-p t)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
+ '(magit-diff-refine-hunk t)
  '(markdown-command
    "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
  '(neo-smart-open t)
