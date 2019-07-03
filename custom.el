@@ -35,6 +35,7 @@
  '(projectile-completion-system (quote helm))
  '(python-fill-docstring-style (quote symmetric))
  '(require-final-newline t)
+ '(sentence-end-double-space nil)
  '(sml/theme (quote respectful))
  '(too-hardcore-backspace t)
  '(too-hardcore-return t)
