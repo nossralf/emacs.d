@@ -101,6 +101,9 @@
 (use-package dockerfile-mode
   :ensure t)
 
+(use-package erlang
+  :ensure t)
+
 (use-package exec-path-from-shell
   :ensure t
   :if (memq window-system '(mac ns x))
