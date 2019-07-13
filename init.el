@@ -62,7 +62,9 @@
 (delete-selection-mode t)
 (global-whitespace-mode)
 
-(add-hook 'prog-mode-hook 'linum-mode)
+(if (version< emacs-version "26.1")
+    (add-hook 'prog-mode-hook 'linum-mode)
+  (add-hook 'prog-mode-hook 'display-line-numbers-mode))
 (add-hook 'prog-mode-hook 'column-number-mode)
 (add-hook 'prog-mode-hook 'eldoc-mode)
 
