@@ -6,6 +6,8 @@
  '(custom-safe-themes
    (quote
     ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
+ '(display-line-numbers-grow-only t)
+ '(display-line-numbers-width-start t)
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "PKG_CONFIG_PATH")))
  '(fill-column 79)
  '(gc-cons-threshold 100000000)
