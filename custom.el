@@ -29,8 +29,7 @@
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa-stable" . "https://stable.melpa.org/packages/")
-     ("melpa" . "https://melpa.org/packages/")
-     ("org" . "https://orgmode.org/elpa/"))))
+     ("melpa" . "https://melpa.org/packages/"))))
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
