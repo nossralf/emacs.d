@@ -1,6 +1,10 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
+(setq load-path
+      (append (delete-dups load-path)
+              '("~/.emacs.d/lisp")))
+
 (require 'package)
 (package-initialize)
 (unless (package-installed-p 'use-package)
@@ -104,7 +108,12 @@
   :ensure t)
 
 (use-package erlang
-  :ensure t)
+  :ensure t
+  :bind (:map erlang-mode-map
+              ("C-c e" . nossralf/erlang/export-current-function)))
+
+(use-package nossralf-erlang
+  :after erlang)
 
 (use-package exec-path-from-shell
   :ensure t
