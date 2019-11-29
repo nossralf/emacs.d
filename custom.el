@@ -13,6 +13,7 @@
  '(gc-cons-threshold 100000000)
  '(git-commit-fill-column 72)
  '(helm-buffers-fuzzy-matching t)
+ '(helm-ff-auto-update-initial-value t)
  '(helm-move-to-line-cycle-in-source t)
  '(helm-recentf-fuzzy-match t)
  '(helm-scroll-amount 8)
