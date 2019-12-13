@@ -144,7 +144,9 @@
 
 (use-package forge
   :ensure t
-  :after magit)
+  :after magit
+  :custom
+  (forge-topic-list-limit '(60 . 0)))
 
 (use-package groovy-mode
   :ensure t)
