@@ -19,3 +19,4 @@ session.*
 transient/
 tramp
 forge-database.sqlite
+.lsp-session-v1

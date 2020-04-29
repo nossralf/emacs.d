@@ -218,6 +218,15 @@
   :ensure t
   :hook (prog-mode . highlight-symbol-mode))
 
+(use-package lsp-mode
+  :ensure t
+  :hook (rust-mode . lsp)
+  :init
+  (setq lsp-keymap-prefix "C-c j")
+  (setq lsp-rust-server 'rust-analyzer)
+  (setq read-process-output-max (* 1024 1024))
+  :commands lsp)
+
 (use-package magit
   :ensure t
   :bind (("M-g b" . magit-blame)
@@ -288,12 +297,6 @@
   :ensure t
   :mode "\\.rs\\'"
   :config
-  (setq racer-rust-src-path (nossralf/read-rust-src-path 'stable))
-  (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
-  (add-hook 'rust-mode-hook 'racer-mode)
-  (add-hook 'rust-mode-hook 'cargo-minor-mode)
-  (add-hook 'racer-mode-hook 'eldoc-mode)
-  (add-hook 'racer-mode-hook 'company-mode)
   (add-hook 'rust-mode-hook
             (lambda ()
               (add-hook 'before-save-hook 'rust-format-buffer nil 'local))))

@@ -34,7 +34,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (aggressive-indent anzu better-defaults cargo company dockerfile-mode erlang exec-path-from-shell expand-region fish-mode flycheck flycheck-color-mode-line flycheck-rust forge git-commit groovy-mode hardcore-mode helm helm-flycheck helm-projectile helm-rg highlight-symbol highlight-symbol magit markdown-mode move-text neotree paredit popwin projectile puppet-mode racer rainbow-delimiters rjsx-mode rust-mode smart-mode-line toml-mode undo-tree use-package which-key yaml-mode yasnippet zenburn-theme)))
+    (lsp-mode aggressive-indent anzu better-defaults cargo company dockerfile-mode erlang exec-path-from-shell expand-region fish-mode flycheck flycheck-color-mode-line flycheck-rust forge git-commit groovy-mode hardcore-mode helm helm-flycheck helm-projectile helm-rg highlight-symbol highlight-symbol magit markdown-mode move-text neotree paredit popwin projectile puppet-mode racer rainbow-delimiters rjsx-mode rust-mode smart-mode-line toml-mode undo-tree use-package which-key yaml-mode yasnippet zenburn-theme)))
  '(projectile-completion-system (quote helm))
  '(python-fill-docstring-style (quote symmetric))
  '(require-final-newline t)
