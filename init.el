@@ -191,6 +191,8 @@
          ("M-x" . helm-M-x)
          ("C-c C-x" . execute-extended-command)
          ("C-c o" . helm-occur))
+  :custom
+  (helm-ff-keep-cached-candidates nil)
   :config
   ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
   ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
