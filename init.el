@@ -289,9 +289,6 @@
   :ensure t
   :defer t)
 
-(use-package racer
-  :ensure t)
-
 (use-package rainbow-delimiters
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
