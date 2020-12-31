@@ -99,16 +99,19 @@
   :ensure t)
 
 (use-package cargo
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package company
   :ensure t)
 
 (use-package dockerfile-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package erlang
   :ensure t
+  :defer t
   :bind (:map erlang-mode-map
               ("C-c e" . nossralf/erlang/export-current-function)))
 
@@ -128,7 +131,8 @@
   :bind (("C-=" . er/expand-region)))
 
 (use-package fish-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package flycheck
   :ensure t
@@ -149,7 +153,8 @@
   (forge-topic-list-limit '(60 . 0)))
 
 (use-package groovy-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package hardcore-mode
   :ensure t
@@ -175,6 +180,7 @@
 
 (use-package git-commit
   :ensure t
+  :defer t
   :custom
   (git-commit-fill-column 72)
   :config
@@ -214,7 +220,8 @@
   (helm-projectile-on))
 
 (use-package helm-rg
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package highlight-symbol
   :ensure t
@@ -240,6 +247,7 @@
 
 (use-package markdown-mode
   :ensure t
+  :mode  "\\.md\\'"
   :custom
   (markdown-command "pandoc --from commonmark --to html5 --highlight-style pygments --standalone"))
 
@@ -253,6 +261,7 @@
   :bind (("C-c d" . neotree-toggle)))
 
 (use-package nxml-mode
+  :defer t
   :config
   (setq nxml-child-indent 4))
 
@@ -265,6 +274,7 @@
 
 (use-package popwin
   :ensure t
+  :defer t
   :config
   (popwin-mode 1))
 
@@ -276,7 +286,8 @@
   (projectile-mode t))
 
 (use-package puppet-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package racer
   :ensure t)
@@ -287,6 +298,7 @@
 
 (use-package rjsx-mode
   :ensure t
+  :defer t
   :config
   (setq js2-basic-offset 2))
 
@@ -305,13 +317,15 @@
 
 (use-package smart-mode-line
   :ensure t
+  :defer t
   :custom
   (sml/theme 'respectful)
   :config
   (sml/setup))
 
 (use-package toml-mode
-  :ensure t)
+  :ensure t
+  :mode "\\.toml\\'")
 
 (use-package undo-tree
   :ensure t
@@ -324,7 +338,8 @@
   (which-key-mode))
 
 (use-package yaml-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package yasnippet
   :ensure t
