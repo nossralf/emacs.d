@@ -115,8 +115,6 @@
 (use-package exec-path-from-shell
   :ensure t
   :if (memq window-system '(mac ns x))
-  :custom
-  (exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
   :config
   (exec-path-from-shell-initialize))
 
@@ -142,9 +140,7 @@
 
 (use-package forge
   :ensure t
-  :after magit
-  :custom
-  (forge-topic-list-limit '(60 . 0)))
+  :after magit)
 
 (use-package groovy-mode
   :ensure t
@@ -152,9 +148,6 @@
 
 (use-package hardcore-mode
   :ensure t
-  :custom
-  (too-hardcore-backspace t)
-  (too-hardcore-return t)
   :config
   (global-hardcore-mode))
 
@@ -175,8 +168,6 @@
 (use-package git-commit
   :ensure t
   :defer t
-  :custom
-  (git-commit-fill-column 72)
   :config
   (add-hook 'git-commit-mode-hook 'flyspell-mode)
   (add-hook 'git-commit-setup-hook 'nossralf/topic-branch-commit-message))
@@ -191,8 +182,6 @@
          ("M-x" . helm-M-x)
          ("C-c C-x" . execute-extended-command)
          ("C-c o" . helm-occur))
-  :custom
-  (helm-ff-keep-cached-candidates nil)
   :config
   ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
   ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
@@ -235,15 +224,11 @@
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)
          ("M-g l" . magit-log)
-         ("M-g s" . magit-status))
-  :custom
-  (magit-diff-refine-hunk t))
+         ("M-g s" . magit-status)))
 
 (use-package markdown-mode
   :ensure t
-  :mode  "\\.md\\'"
-  :custom
-  (markdown-command "pandoc --from commonmark --to html5 --highlight-style pygments --standalone"))
+  :mode  "\\.md\\'")
 
 (use-package move-text
   :ensure t
@@ -309,8 +294,6 @@
 (use-package smart-mode-line
   :ensure t
   :defer t
-  :custom
-  (sml/theme 'respectful)
   :config
   (sml/setup))
 
