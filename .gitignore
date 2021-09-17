@@ -21,3 +21,4 @@ tramp
 forge-database.sqlite
 .lsp-session-v1
 flycheck_init.el
+history
