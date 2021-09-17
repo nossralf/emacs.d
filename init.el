@@ -5,13 +5,22 @@
       (append (delete-dups load-path)
               '("~/.emacs.d/lisp")))
 
-(require 'package)
-(package-initialize)
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(eval-when-compile
-  (require 'use-package))
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
+
 (setq use-package-verbose t)
 
 (setq auto-save-file-name-transforms
@@ -76,83 +85,65 @@
 (global-set-key (kbd "M-3") 'split-window-right)
 (global-set-key (kbd "M-0") 'delete-window)
 
-(global-set-key (kbd "C-c l p") 'list-packages)
-
 ;; --- Modes ---
 
 (use-package aggressive-indent
-  :ensure t
   :hook (emacs-lisp-mode . aggressive-indent-mode))
 
 (use-package anzu
-  :ensure t
   :config
   (global-anzu-mode t))
 
-(use-package better-defaults
-  :ensure t)
+(use-package better-defaults)
 
 (use-package cargo
-  :ensure t
   :defer t)
 
-(use-package company
-  :ensure t)
+(use-package company)
 
 (use-package dockerfile-mode
-  :ensure t
   :defer t)
 
 (use-package erlang
-  :ensure t
   :defer t
   :bind (:map erlang-mode-map
               ("C-c e" . nossralf/erlang/export-current-function)))
 
 (use-package nossralf-erlang
+  :straight nil
   :after erlang)
 
 (use-package exec-path-from-shell
-  :ensure t
   :if (memq window-system '(mac ns x))
   :config
   (exec-path-from-shell-initialize))
 
 (use-package expand-region
-  :ensure t
   :bind (("C-=" . er/expand-region)))
 
 (use-package fish-mode
-  :ensure t
   :defer t)
 
 (use-package flycheck
-  :ensure t
   :config
   (add-hook 'after-init-hook 'global-flycheck-mode))
 
 (use-package flycheck-color-mode-line
-  :ensure t
   :hook (flycheck-mode . flycheck-color-mode-line-mode))
 
-(use-package flycheck-rust
-  :ensure t)
+(use-package flycheck-rust)
 
 (use-package forge
-  :ensure t
   :after magit)
 
 (use-package groovy-mode
-  :ensure t
   :defer t)
 
 (use-package hardcore-mode
-  :ensure t
   :config
   (global-hardcore-mode))
 
 (use-package highlight-symbol
-  :ensure t
   :hook (prog-mode . highlight-symbol-mode))
 
 (defun nossralf/topic-branch-commit-message ()
@@ -166,14 +157,12 @@
         (insert issue-name " ")))))
 
 (use-package git-commit
-  :ensure t
   :defer t
   :config
   (add-hook 'git-commit-mode-hook 'flyspell-mode)
   (add-hook 'git-commit-setup-hook 'nossralf/topic-branch-commit-message))
 
 (use-package helm
-  :ensure t
   :bind (("C-x C-b" . helm-buffers-list)
          ("C-x C-d" . helm-browse-project)
          ("C-x b" . helm-mini)
@@ -192,26 +181,21 @@
   (helm-mode))
 
 (use-package helm-flycheck
-  :ensure t
   :config
   (eval-after-load 'flycheck
     '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck)))
 
 (use-package helm-projectile
-  :ensure t
   :config
   (helm-projectile-on))
 
 (use-package helm-rg
-  :ensure t
   :defer t)
 
 (use-package highlight-symbol
-  :ensure t
   :hook (prog-mode . highlight-symbol-mode))
 
 (use-package lsp-mode
-  :ensure t
   :hook (rust-mode . lsp)
   :init
   (setq lsp-keymap-prefix "C-c j")
@@ -220,60 +204,45 @@
   :commands lsp)
 
 (use-package magit
-  :ensure t
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)
          ("M-g l" . magit-log)
          ("M-g s" . magit-status)))
 
 (use-package markdown-mode
-  :ensure t
   :mode  "\\.md\\'")
 
 (use-package move-text
-  :ensure t
   :bind (("M-P" . move-text-up)
          ("M-N" . move-text-down)))
 
 (use-package neotree
-  :ensure t
   :bind (("C-c d" . neotree-toggle)))
 
-(use-package nxml-mode
-  :defer t
-  :config
-  (setq nxml-child-indent 4))
-
 (use-package paredit
-  :ensure t
   :bind (:map paredit-mode-map
               ("M-{" . paredit-wrap-curly)
               ("M-[" . paredit-wrap-square))
   :hook (emacs-lisp-mode . paredit-mode))
 
 (use-package popwin
-  :ensure t
   :defer t
   :config
   (popwin-mode 1))
 
 (use-package projectile
-  :ensure t
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map))
   :config
   (projectile-mode t))
 
 (use-package puppet-mode
-  :ensure t
   :defer t)
 
 (use-package rainbow-delimiters
-  :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package rjsx-mode
-  :ensure t
   :defer t
   :config
   (setq js2-basic-offset 2))
@@ -284,7 +253,6 @@
     (concat (string-trim (shell-command-to-string cmd)) "/lib/rustlib/src/rust/src")))
 
 (use-package rust-mode
-  :ensure t
   :mode "\\.rs\\'"
   :config
   (add-hook 'rust-mode-hook
@@ -292,36 +260,29 @@
               (add-hook 'before-save-hook 'rust-format-buffer nil 'local))))
 
 (use-package smart-mode-line
-  :ensure t
   :defer t
   :config
   (sml/setup))
 
 (use-package toml-mode
-  :ensure t
   :mode "\\.toml\\'")
 
 (use-package undo-tree
-  :ensure t
   :config
   (global-undo-tree-mode))
 
 (use-package which-key
-  :ensure t
   :config
   (which-key-mode))
 
 (use-package yaml-mode
-  :ensure t
   :defer t)
 
 (use-package yasnippet
-  :ensure t
   :hook (prog-mode . yas-minor-mode)
   :config
   (yas-reload-all))
 
 (use-package zenburn-theme
-  :ensure t
   :config
   (load-theme 'zenburn t))

@@ -22,3 +22,6 @@ forge-database.sqlite
 .lsp-session-v1
 flycheck_init.el
 history
+straight/repos
+straight/build
+straight/build-cache.el

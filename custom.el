@@ -27,19 +27,17 @@
    "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
  '(neo-smart-open t)
  '(neo-theme 'nerd)
+ '(nxml-child-indent 4)
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa-stable" . "https://stable.melpa.org/packages/")
      ("melpa" . "https://melpa.org/packages/")))
- '(package-enable-at-startup nil)
- '(package-selected-packages
-   (quote
-    (lsp-mode aggressive-indent anzu better-defaults cargo company dockerfile-mode erlang exec-path-from-shell expand-region fish-mode flycheck flycheck-color-mode-line flycheck-rust forge git-commit groovy-mode hardcore-mode helm helm-flycheck helm-projectile helm-rg highlight-symbol highlight-symbol magit markdown-mode move-text neotree paredit popwin projectile puppet-mode racer rainbow-delimiters rjsx-mode rust-mode smart-mode-line toml-mode undo-tree use-package which-key yaml-mode yasnippet zenburn-theme)))
  '(projectile-completion-system 'helm)
  '(python-fill-docstring-style 'symmetric)
  '(require-final-newline t)
  '(sentence-end-double-space nil)
  '(sml/theme 'respectful)
+ '(straight-vc-git-default-clone-depth 1)
  '(too-hardcore-backspace t)
  '(too-hardcore-return t)
  '(whitespace-style '(face empty lines-tail trailing)))
