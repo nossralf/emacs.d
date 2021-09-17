@@ -28,8 +28,6 @@
 
 (defun nossralf/macos ()
   "Run macOS-specific setup."
-  ;; Maximize window
-  (toggle-frame-maximized)
   ;; More reasonable scroll behavior
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil)
@@ -41,14 +39,12 @@
 
 (defun nossralf/linux/x ()
   "Run Linux-specific setup."
-  (toggle-frame-maximized)
   (set-face-attribute 'default nil :height 90))
 
 (defun nossralf/linux/emacsclient-frame-hook (frame)
   "A hook to set an emacsclient-created FRAME to be maximized and have the correct face attribute settings."
   (when (display-graphic-p frame)
     (select-frame frame)
-    (toggle-frame-maximized)
     (set-face-attribute 'default nil :height 90)))
 
 ;; Perform platform-specific setup
