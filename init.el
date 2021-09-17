@@ -32,10 +32,8 @@
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil)
   ;; Rejigger the keys to my liking
-  (setq mac-option-key-is-meta nil)
-  (setq mac-command-key-is-meta t)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier nil))
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'super))
 
 (defun nossralf/linux/x ()
   "Run Linux-specific setup."
