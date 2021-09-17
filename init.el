@@ -99,10 +99,10 @@
 (use-package company)
 
 (use-package dockerfile-mode
-  :defer t)
+  :commands dockerfile-mode)
 
 (use-package erlang
-  :defer t
+  :commands erlang-mode
   :bind (:map erlang-mode-map
               ("C-c e" . nossralf/erlang/export-current-function)))
 
@@ -119,7 +119,7 @@
   :bind (("C-=" . er/expand-region)))
 
 (use-package fish-mode
-  :defer t)
+  :commands fish-mode)
 
 (use-package flycheck
   :config
@@ -134,7 +134,7 @@
   :after magit)
 
 (use-package groovy-mode
-  :defer t)
+  :commands groovy-mode)
 
 (use-package hardcore-mode
   :config
@@ -234,13 +234,13 @@
   (projectile-mode t))
 
 (use-package puppet-mode
-  :defer t)
+  :commands puppet-mode)
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package rjsx-mode
-  :defer t
+  :commands rjsx-mode
   :config
   (setq js2-basic-offset 2))
 
@@ -257,7 +257,6 @@
               (add-hook 'before-save-hook 'rust-format-buffer nil 'local))))
 
 (use-package smart-mode-line
-  :defer t
   :config
   (sml/setup))
 
@@ -273,7 +272,7 @@
   (which-key-mode))
 
 (use-package yaml-mode
-  :defer t)
+  :commands yaml-mode)
 
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
