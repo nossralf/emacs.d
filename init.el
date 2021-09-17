@@ -96,9 +96,6 @@
 
 (use-package better-defaults)
 
-(use-package cargo
-  :defer t)
-
 (use-package company)
 
 (use-package dockerfile-mode

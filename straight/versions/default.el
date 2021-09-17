@@ -1,7 +1,6 @@
 (("aggressive-indent-mode" . "cb416faf61c46977c06cf9d99525b04dc109a33c")
  ("anzu" . "bdb3da5028935a4aea55c40769bc191a81afb54e")
  ("better-defaults" . "4c5409406ee35c5ba46880c6cfe98df4b14dc631")
- ("cargo.el" . "794f902bb84437afcc5d677d4a7a996c1f98359b")
  ("closql" . "e2687e7ff958a19e6e5d6552c4e0b7b33c424bab")
  ("company-mode" . "1887974e7ad50cb4884fbec27985078bba754b60")
  ("dash.el" . "39d067b9fbb2db65fc7a6938bfb21489ad990cb4")
