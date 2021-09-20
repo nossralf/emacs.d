@@ -19,9 +19,6 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
-(setq straight-use-package-by-default t)
-
-(setq use-package-verbose t)
 
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
@@ -31,7 +28,6 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(setq ring-bell-function 'ignore)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -39,10 +35,7 @@
   "Run macOS-specific setup."
   ;; More reasonable scroll behavior
   (setq mouse-wheel-scroll-amount '(1))
-  (setq mouse-wheel-progressive-speed nil)
-  ;; Rejigger the keys to my liking
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-modifier 'super))
+  (setq mouse-wheel-progressive-speed nil))
 
 (defun nossralf/linux/x ()
   "Run Linux-specific setup."
@@ -194,10 +187,6 @@
 
 (use-package lsp-mode
   :hook (rust-mode . lsp)
-  :init
-  (setq lsp-keymap-prefix "C-c j")
-  (setq lsp-rust-server 'rust-analyzer)
-  (setq read-process-output-max (* 1024 1024))
   :commands lsp)
 
 (use-package magit
@@ -240,9 +229,7 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package rjsx-mode
-  :commands rjsx-mode
-  :config
-  (setq js2-basic-offset 2))
+  :commands rjsx-mode)
 
 (defun nossralf/read-rust-src-path (toolchain)
   "Figure out the source code location for the given Rust TOOLCHAIN."

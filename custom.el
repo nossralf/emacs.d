@@ -22,6 +22,11 @@
  '(helm-split-window-inside-p t)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
+ '(js-indent-level 2)
+ '(lsp-keymap-prefix "C-c j")
+ '(lsp-rust-server 'rust-analyzer)
+ '(mac-command-modifier 'super)
+ '(mac-option-modifier 'meta)
  '(magit-diff-refine-hunk t)
  '(markdown-command
    "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
@@ -34,12 +39,16 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(projectile-completion-system 'helm)
  '(python-fill-docstring-style 'symmetric)
+ '(read-process-output-max 1048576)
  '(require-final-newline t)
+ '(ring-bell-function 'ignore)
  '(sentence-end-double-space nil)
  '(sml/theme 'respectful)
+ '(straight-use-package-by-default t)
  '(straight-vc-git-default-clone-depth 1)
  '(too-hardcore-backspace t)
  '(too-hardcore-return t)
+ '(use-package-verbose t)
  '(whitespace-style '(face empty lines-tail trailing)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
