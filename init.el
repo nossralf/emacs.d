@@ -133,9 +133,6 @@
   :config
   (global-hardcore-mode))
 
-(use-package highlight-symbol
-  :hook (prog-mode . highlight-symbol-mode))
-
 (defun nossralf/topic-branch-commit-message ()
   "Make the commit message begin with the Jira issue for topic branches."
   (let* ((buffer-contents (buffer-substring-no-properties (point-min) (point-max)))
@@ -181,9 +178,6 @@
 
 (use-package helm-rg
   :defer t)
-
-(use-package highlight-symbol
-  :hook (prog-mode . highlight-symbol-mode))
 
 (use-package lsp-mode
   :hook (rust-mode . lsp)
@@ -246,6 +240,10 @@
 (use-package smart-mode-line
   :config
   (sml/setup))
+
+(use-package symbol-overlay
+  :hook (prog-mode . symbol-overlay-mode)
+  :bind (("s-i" . symbol-overlay-put)))
 
 (use-package toml-mode
   :mode "\\.toml\\'")
