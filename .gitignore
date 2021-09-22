@@ -24,4 +24,5 @@ flycheck_init.el
 history
 straight/repos
 straight/build
+straight/watcher
 straight/build-cache.el

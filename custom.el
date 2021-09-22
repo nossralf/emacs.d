@@ -44,6 +44,7 @@
  '(ring-bell-function 'ignore)
  '(sentence-end-double-space nil)
  '(sml/theme 'respectful)
+ '(straight-check-for-modifications '(watch-files))
  '(straight-use-package-by-default t)
  '(straight-vc-git-default-clone-depth 1)
  '(too-hardcore-backspace t)
