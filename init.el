@@ -131,21 +131,10 @@
   :config
   (global-hardcore-mode))
 
-(defun nossralf/topic-branch-commit-message ()
-  "Make the commit message begin with the Jira issue for topic branches."
-  (let* ((buffer-contents (buffer-substring-no-properties (point-min) (point-max)))
-         (found-topic-branch (string-match "On branch topic-\\([A-Z]+-[0-9]+\\)" buffer-contents))
-         (issue-name (match-string 1 buffer-contents)))
-    (when found-topic-branch
-      (unless (string-prefix-p issue-name buffer-contents)
-        (goto-char 0)
-        (insert issue-name " ")))))
-
 (use-package git-commit
   :defer t
   :config
-  (add-hook 'git-commit-mode-hook 'flyspell-mode)
-  (add-hook 'git-commit-setup-hook 'nossralf/topic-branch-commit-message))
+  (add-hook 'git-commit-mode-hook 'flyspell-mode))
 
 (use-package helm
   :bind (("C-x C-b" . helm-buffers-list)
