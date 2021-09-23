@@ -121,8 +121,6 @@
 (use-package flycheck-color-mode-line
   :hook (flycheck-mode . flycheck-color-mode-line-mode))
 
-(use-package flycheck-rust)
-
 (use-package forge
   :after magit)
 

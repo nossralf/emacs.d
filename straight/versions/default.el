@@ -18,7 +18,6 @@
  ("f.el" . "50af874cd19042f17c8686813d52569b1025c76a")
  ("flycheck" . "784f184cdd9f9cb4e3dbb997c09d93e954142842")
  ("flycheck-color-mode-line" . "575b604cfe21f65fb07c134392c382c163c87739")
- ("flycheck-rust" . "a139cd53c5062697e9ed94ad80b803c37d999600")
  ("forge" . "f97bc47e9e2a2a6300dd267bdd67a88254f65aa7")
  ("ghub" . "b1b629563b888223e23a4234af26ea1d02b2caa0")
  ("gnu-elpa-mirror" . "a4cb56778914a8d438341173b2312f49b637e59a")
