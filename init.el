@@ -181,7 +181,9 @@
 
 (use-package lsp-mode
   :hook (rust-mode . lsp)
-  :commands lsp)
+  :commands lsp
+  :init
+  (setq read-process-output-max (* 1024 1024)))
 
 (use-package magit
   :bind (("M-g b" . magit-blame)

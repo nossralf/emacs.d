@@ -39,7 +39,6 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(projectile-completion-system 'helm)
  '(python-fill-docstring-style 'symmetric)
- '(read-process-output-max 1048576)
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(sentence-end-double-space nil)
