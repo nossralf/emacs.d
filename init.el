@@ -83,13 +83,13 @@
 (use-package aggressive-indent
   :hook (emacs-lisp-mode . aggressive-indent-mode))
 
-(use-package anzu
-  :config
-  (global-anzu-mode t))
-
 (use-package better-defaults)
 
 (use-package company)
+
+(use-package ctrlf
+  :config
+  (ctrlf-mode t))
 
 (use-package dockerfile-mode
   :commands dockerfile-mode)
