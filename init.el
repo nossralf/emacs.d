@@ -253,6 +253,8 @@
   :config
   (yas-reload-all))
 
+(use-package yasnippet-snippets)
+
 (use-package zenburn-theme
   :config
   (load-theme 'zenburn t))

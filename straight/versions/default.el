@@ -61,5 +61,6 @@
  ("yaml-mode" . "63b637f846411806ae47e63adc06fe9427be1131")
  ("yaml.el" . "84b88c9ed178af16da18b230c1f61c57cefedf28")
  ("yasnippet" . "5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6")
+ ("yasnippet-snippets" . "f50b4c16ca2a73fd04ebd301f0bf2f5ab6107d88")
  ("zenburn-emacs" . "13266182dc51534394bd427840bc78e2a78d01bd"))
 :beta
