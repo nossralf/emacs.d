@@ -213,6 +213,9 @@
   :config
   (projectile-mode t))
 
+(use-package protobuf-mode
+  :mode "\\.proto\\'")
+
 (use-package puppet-mode
   :commands puppet-mode)
 

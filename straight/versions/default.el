@@ -43,6 +43,7 @@
  ("popup-el" . "cf899f8012f4189e76a009bebb589ff71631b1e9")
  ("popwin" . "1184368d3610bd0d0ca4a3db4068048c562c2b50")
  ("projectile" . "08fcdd51269d7e3c1c41c7f688555534067daa0e")
+ ("protobuf" . "29b3d01572d50c0e5bc0ab2eea32f9779c7576f4")
  ("puppet-mode" . "71bcd383f20a457e8ad34e0e08ec47f8e1b64263")
  ("rainbow-delimiters" . "d576e6694ad3a3e88b2bb1363305b38fa364c149")
  ("rich-minority" . "a03e693f6f9232cf75363aaaf1cb041f21675c19")
