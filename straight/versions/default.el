@@ -21,6 +21,7 @@
  ("forge" . "41efa674cff0b447efbc103494fd61ec9b9156ae")
  ("ghub" . "fb2ecd726577b0049cd56883649c6ccb8072ae63")
  ("gnu-elpa-mirror" . "fea2b2e75458dc7ed77290d10fc0a7c47dccd24d")
+ ("go-mode.el" . "5bd8efab64352dccf31dbc99c4fc96d3b985ef27")
  ("groovy-emacs-modes" . "84f89b68ec8f79bce0b3f5b29af155a85124e3a6")
  ("hardcore-mode.el" . "b1dda19692b4a7a58a689e81784a9b35be39e70d")
  ("helm" . "338ca0a55fcb487eccd72ed11b75f2a3cc700280")

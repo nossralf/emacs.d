@@ -124,6 +124,14 @@
 (use-package forge
   :after magit)
 
+(use-package go-mode
+  :config
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (setq tab-width 2)
+              (add-hook 'before-save-hook 'lsp-format-buffer nil 'local)
+              (add-hook 'before-save-hook 'lsp-organize-imports nil 'local))))
+
 (use-package groovy-mode
   :commands groovy-mode)
 
@@ -167,7 +175,7 @@
   :defer t)
 
 (use-package lsp-mode
-  :hook (rust-mode . lsp)
+  :hook ((rust-mode . lsp) (go-mode . lsp-deferred))
   :commands lsp
   :init
   (setq read-process-output-max (* 1024 1024)))
