@@ -175,8 +175,8 @@
   :defer t)
 
 (use-package lsp-mode
-  :hook ((rust-mode . lsp) (go-mode . lsp-deferred))
-  :commands lsp
+  :hook ((rust-mode . lsp-deferred) (go-mode . lsp-deferred))
+  :commands (lsp lsp-deferred)
   :init
   (setq read-process-output-max (* 1024 1024)))
 
