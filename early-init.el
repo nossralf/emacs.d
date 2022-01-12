@@ -3,4 +3,5 @@
 (setq tool-bar-mode nil
       menu-bar-mode nil
       scroll-bar-mode nil
-      package-enable-at-startup nil)
+      package-enable-at-startup nil
+      frame-title-format nil)
