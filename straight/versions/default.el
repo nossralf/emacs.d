@@ -33,6 +33,7 @@
  ("js2-mode" . "997cac4c80a03062145b541b006c51cc91ee0c24")
  ("let-alist" . "592553db5929b54db40af0df90c5add0aaca045b")
  ("lsp-mode" . "1d9da9f24fd477faa2a38b369842a27fe5bda160")
+ ("lsp-pyright" . "d428dbcf1802fbe147271c8dc74b073bd9cd7403")
  ("magit" . "2a7812705f5cf4b864bb162576415863f4116285")
  ("markdown-mode" . "c002dc075397143147b5660df289d834d06b5909")
  ("melpa" . "9f453169fb0d92f4c9ec8dd7d4b72a87cf8eceb9")

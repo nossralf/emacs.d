@@ -180,6 +180,11 @@
   :init
   (setq read-process-output-max (* 1024 1024)))
 
+(use-package lsp-pyright
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-pyright)
+                         (lsp-deferred))))
+
 (use-package magit
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)

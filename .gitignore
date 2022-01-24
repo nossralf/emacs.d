@@ -24,3 +24,4 @@ flycheck_init.el
 history
 /straight/*
 !/straight/versions
+.cache
