@@ -125,6 +125,7 @@
   :after magit)
 
 (use-package go-mode
+  :hook (go-mode . subword-mode)
   :config
   (add-hook 'go-mode-hook
             (lambda ()
