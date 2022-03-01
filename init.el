@@ -125,7 +125,6 @@
   :after magit)
 
 (use-package go-mode
-  :hook (go-mode . subword-mode)
   :config
   (add-hook 'go-mode-hook
             (lambda ()
@@ -246,6 +245,10 @@
 (use-package smart-mode-line
   :config
   (sml/setup))
+
+(use-package subword-mode
+  :straight (:type built-in)
+  :hook (go-mode python-mode rust-mode))
 
 (use-package symbol-overlay
   :hook (prog-mode . symbol-overlay-mode)
