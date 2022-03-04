@@ -58,6 +58,7 @@
  ("transient" . "72b8c013936b8e8d891105144107781a43516735")
  ("treepy.el" . "3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3")
  ("undo-tree" . "e326c6135e62f5fe8536528d3acd5e798f847407")
+ ("unfill" . "3bd4c8d3df15fb54a79f97e26177819fc0ebf877")
  ("use-package" . "a7422fb8ab1baee19adb2717b5b47b9c3812a84c")
  ("with-editor" . "f514f23258af67a10fc8e1c431bfe94702b6e65b")
  ("yaml-mode" . "535273d5a1eb76999d20afbcf4d9f056d8ffd2da")

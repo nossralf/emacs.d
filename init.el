@@ -261,6 +261,9 @@
   :config
   (global-undo-tree-mode))
 
+(use-package unfill
+  :bind (("M-Q" . unfill-paragraph)))
+
 (use-package which-key
   :config
   (which-key-mode))
