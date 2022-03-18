@@ -55,6 +55,7 @@
  ("spinner" . "34905eae12a236753fa88abc831eff1e41e8576e")
  ("straight.el" . "af5437f2afd00936c883124d6d3098721c2d306c")
  ("symbol-overlay" . "c439b73a5f9713bb3dce98986b589bb901e22130")
+ ("systemd-mode" . "b6ae63a236605b1c5e1069f7d3afe06ae32a7bae")
  ("toml-mode.el" . "f6c61817b00f9c4a3cab1bae9c309e0fc45cdd06")
  ("transient" . "017eb7b3cb631bb432066539c459bfa96afa0543")
  ("treepy.el" . "3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3")

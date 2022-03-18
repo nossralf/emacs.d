@@ -254,6 +254,8 @@
   :hook (prog-mode . symbol-overlay-mode)
   :bind (("s-i" . symbol-overlay-put)))
 
+(use-package systemd)
+
 (use-package toml-mode
   :mode "\\.toml\\'")
 
