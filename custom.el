@@ -49,6 +49,7 @@
  '(straight-vc-git-default-clone-depth 1)
  '(too-hardcore-backspace t)
  '(too-hardcore-return t)
+ '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
  '(use-package-verbose t)
  '(whitespace-style '(face empty lines-tail trailing)))
 (custom-set-faces

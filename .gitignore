@@ -25,3 +25,4 @@ history
 /straight/*
 !/straight/versions
 .cache
+undo
