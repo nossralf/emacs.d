@@ -30,6 +30,7 @@
  '(magit-diff-refine-hunk t)
  '(markdown-command
    "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
+ '(native-comp-async-report-warnings-errors 'silent)
  '(neo-smart-open t)
  '(neo-theme 'nerd)
  '(nxml-child-indent 4)
