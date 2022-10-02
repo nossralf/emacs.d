@@ -173,6 +173,8 @@
 (use-package helm-rg
   :defer t)
 
+(use-package htmlize)
+
 (use-package lsp-mode
   :hook ((rust-mode . lsp-deferred) (go-mode . lsp-deferred))
   :commands (lsp lsp-deferred)
