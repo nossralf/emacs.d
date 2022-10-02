@@ -141,8 +141,7 @@
 
 (use-package git-commit
   :defer t
-  :config
-  (add-hook 'git-commit-mode-hook 'flyspell-mode))
+  :hook (git-commit-mode . flyspell-mode))
 
 (use-package helm
   :bind (("C-x C-b" . helm-buffers-list)
