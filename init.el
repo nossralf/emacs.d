@@ -124,6 +124,10 @@
 (use-package forge
   :after magit)
 
+(use-package git-commit
+  :defer t
+  :hook (git-commit-mode . flyspell-mode))
+
 (use-package go-mode
   :config
   (add-hook 'go-mode-hook
@@ -138,10 +142,6 @@
 (use-package hardcore-mode
   :config
   (global-hardcore-mode))
-
-(use-package git-commit
-  :defer t
-  :hook (git-commit-mode . flyspell-mode))
 
 (use-package helm
   :bind (("C-x C-b" . helm-buffers-list)
