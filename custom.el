@@ -34,6 +34,7 @@
  '(neo-smart-open t)
  '(neo-theme 'nerd)
  '(nxml-child-indent 4)
+ '(org-src-fontify-natively t)
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa-stable" . "https://stable.melpa.org/packages/")
