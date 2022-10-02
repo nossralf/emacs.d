@@ -43,6 +43,7 @@
  '(python-fill-docstring-style 'symmetric)
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
+ '(rustic-format-trigger 'on-save)
  '(sentence-end-double-space nil)
  '(sml/theme 'respectful)
  '(split-height-threshold 100)

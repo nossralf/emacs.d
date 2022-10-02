@@ -176,7 +176,7 @@
 (use-package htmlize)
 
 (use-package lsp-mode
-  :hook ((rust-mode . lsp-deferred) (go-mode . lsp-deferred))
+  :hook ((go-mode . lsp-deferred))
   :commands (lsp lsp-deferred)
   :init
   (setq read-process-output-max (* 1024 1024)))
@@ -231,17 +231,7 @@
 (use-package rjsx-mode
   :commands rjsx-mode)
 
-(defun nossralf/read-rust-src-path (toolchain)
-  "Figure out the source code location for the given Rust TOOLCHAIN."
-  (let ((cmd (format "rustc +%s --print sysroot" (symbol-name toolchain))))
-    (concat (string-trim (shell-command-to-string cmd)) "/lib/rustlib/src/rust/src")))
-
-(use-package rust-mode
-  :mode "\\.rs\\'"
-  :config
-  (add-hook 'rust-mode-hook
-            (lambda ()
-              (add-hook 'before-save-hook 'rust-format-buffer nil 'local))))
+(use-package rustic)
 
 (use-package smart-mode-line
   :config
