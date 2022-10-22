@@ -179,8 +179,9 @@
 (use-package htmlize)
 
 (use-package lsp-mode
-  :hook ((go-mode . lsp-deferred))
   :commands (lsp lsp-deferred)
+  :hook  ((go-mode . lsp-deferred)
+          (lsp-mode . lsp-enable-which-key-integration))
   :init
   (setq read-process-output-max (* 1024 1024)))
 
