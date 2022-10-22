@@ -23,7 +23,7 @@
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
- '(lsp-keymap-prefix "C-c j")
+ '(lsp-keymap-prefix "s-l")
  '(lsp-pyright-multi-root nil)
  '(lsp-rust-server 'rust-analyzer)
  '(mac-command-modifier 'super)
