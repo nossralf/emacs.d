@@ -85,6 +85,9 @@
 
 (use-package better-defaults)
 
+(use-package blacken
+  :hook python-mode)
+
 (use-package company)
 
 (use-package ctrlf

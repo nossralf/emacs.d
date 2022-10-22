@@ -1,5 +1,6 @@
 (("aggressive-indent-mode" . "f376cdc25de5c0f8c330f1e053557d95ca47a540")
  ("better-defaults" . "20ac176ccdc18ff8cb4a6b37cf1fe90fa7f88335")
+ ("blacken" . "456596e00f8277eafd9a08c62a71df06e8cad2c5")
  ("closql" . "463b0f4d4c3e66acd5d30c6572cc45eaecc25633")
  ("company-mode" . "48fea7a905b3bcc6d97609316beced666da89b1f")
  ("compat" . "056e3ccffc716990dcb7b33273453d5fce0402de")
