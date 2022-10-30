@@ -254,6 +254,13 @@
 (use-package toml-mode
   :mode "\\.toml\\'")
 
+(use-package tree-sitter
+  :hook (tree-sitter-after-on . tree-sitter-hl-mode)
+  :init
+  (global-tree-sitter-mode))
+
+(use-package tree-sitter-langs)
+
 (use-package undo-tree
   :config
   (global-undo-tree-mode))
