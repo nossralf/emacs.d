@@ -88,7 +88,10 @@
 (use-package blacken
   :hook python-mode)
 
-(use-package company)
+(use-package company
+  :hook (after-init . global-company-mode)
+  :bind (:map company-mode-map
+              ([remap indent-for-tab-command] . company-indent-or-complete-common)))
 
 (use-package ctrlf
   :config
