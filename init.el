@@ -89,7 +89,7 @@
   :hook python-mode)
 
 (use-package company
-  :hook (after-init . global-company-mode)
+  :hook (prog-mode . company-mode)
   :bind (:map company-mode-map
               ([remap indent-for-tab-command] . company-indent-or-complete-common)))
 
