@@ -220,6 +220,8 @@
   :config
   (popwin-mode 1))
 
+(use-package powershell)
+
 (use-package projectile
   :bind (:map projectile-mode-map
               ("s-p" . projectile-command-map))
