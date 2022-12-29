@@ -164,7 +164,7 @@
   ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
   (global-set-key (kbd "C-c h") 'helm-command-prefix)
   (global-unset-key (kbd "C-x c"))
-  (require 'helm-config)
+  (require 'helm-autoloads)
   (helm-mode))
 
 (use-package helm-flycheck
