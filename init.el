@@ -249,6 +249,8 @@
   :config
   (sml/setup))
 
+(use-package sqlite3)
+
 (use-package subword-mode
   :straight (:type built-in)
   :hook (go-mode python-mode rust-mode))

@@ -16,6 +16,7 @@
  ("emacs-neotree" . "98fe21334affaffe2334bf7c987edaf1980d2d0b")
  ("emacs-python-isort" . "8b4948b7fcad90fc9b72f69f4653260bd21f62c3")
  ("emacs-reformatter" . "f454b179ab7d39dc8783b9f2a046cab353b272f5")
+ ("emacs-sqlite3-api" . "b513b71012f61895f771fc6948d6511ea8ded0a6")
  ("emacs-which-key" . "bd34ede7bf77ad3988330b37207f3978e7342c79")
  ("emacsmirror-mirror" . "a6e6b495d5ef8954c6cae4d25db9b1519a6d22fa")
  ("emacsql" . "64012261f65fcdd7ea137d1973ef051af1dced42")
