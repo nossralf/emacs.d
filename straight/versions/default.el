@@ -14,6 +14,8 @@
  ("emacs-fish" . "d04478c0aba018cb789d77d591bfe315cb25132a")
  ("emacs-htmlize" . "dd27bc3f26efd728f2b1f01f9e4ac4f61f2ffbf9")
  ("emacs-neotree" . "98fe21334affaffe2334bf7c987edaf1980d2d0b")
+ ("emacs-python-isort" . "8b4948b7fcad90fc9b72f69f4653260bd21f62c3")
+ ("emacs-reformatter" . "f454b179ab7d39dc8783b9f2a046cab353b272f5")
  ("emacs-which-key" . "8093644032854b1cdf3245ce4e3c7b6673f741bf")
  ("emacsmirror-mirror" . "22ac279cdbf773c2c1ae7acd817581c6a6ab6e3b")
  ("emacsql" . "415dbfd846f46d921a70a351695f0d0e8f75da35")

@@ -234,6 +234,9 @@
 (use-package puppet-mode
   :commands puppet-mode)
 
+(use-package python-isort
+  :hook (python-mode . python-isort-on-save-mode))
+
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
