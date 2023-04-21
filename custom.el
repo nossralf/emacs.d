@@ -24,6 +24,7 @@
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(lsp-keymap-prefix "s-l")
+ '(lsp-pwsh-code-formatting-preset "OTBS")
  '(lsp-pyright-multi-root nil)
  '(lsp-rust-server 'rust-analyzer)
  '(mac-command-modifier 'super)

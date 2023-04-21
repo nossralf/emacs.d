@@ -184,6 +184,7 @@
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :hook  ((go-mode . lsp-deferred)
+          (powershell-mode . lsp-deferred)
           (lsp-mode . lsp-enable-which-key-integration))
   :init
   (setq read-process-output-max (* 1024 1024)))
@@ -220,7 +221,8 @@
   :config
   (popwin-mode 1))
 
-(use-package powershell)
+(use-package powershell
+  :hook (before-save . lsp-format-buffer))
 
 (use-package projectile
   :bind (:map projectile-mode-map
