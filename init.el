@@ -135,6 +135,7 @@
   :hook (git-commit-mode . flyspell-mode))
 
 (use-package go-mode
+  :commands go-mode
   :config
   (add-hook 'go-mode-hook
             (lambda ()
@@ -245,7 +246,8 @@
 (use-package rjsx-mode
   :commands rjsx-mode)
 
-(use-package rustic)
+(use-package rustic
+  :commands rustic-mode)
 
 (use-package smart-mode-line
   :config
