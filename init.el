@@ -57,9 +57,9 @@
  ((memq window-system '(mac ns))
   (nossralf/macos)))
 
-(electric-pair-mode t)
+(electric-pair-mode +1)
 (global-hl-line-mode)
-(delete-selection-mode t)
+(delete-selection-mode +1)
 (global-whitespace-mode)
 
 (if (version< emacs-version "26.1")
@@ -95,7 +95,7 @@
 
 (use-package ctrlf
   :config
-  (ctrlf-mode t))
+  (ctrlf-mode +1))
 
 (use-package dockerfile-mode
   :commands dockerfile-mode)
@@ -228,7 +228,7 @@
   :bind (:map projectile-mode-map
               ("s-p" . projectile-command-map))
   :config
-  (projectile-mode t))
+  (projectile-mode +1))
 
 (use-package protobuf-mode
   :mode "\\.proto\\'")
