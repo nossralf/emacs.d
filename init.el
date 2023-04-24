@@ -169,6 +169,7 @@
   (helm-mode))
 
 (use-package helm-flycheck
+  :defer t
   :config
   (eval-after-load 'flycheck
     '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck)))
@@ -191,6 +192,7 @@
   (setq read-process-output-max (* 1024 1024)))
 
 (use-package lsp-pyright
+  :defer t
   :hook (python-mode . (lambda ()
                          (require 'lsp-pyright)
                          (lsp-deferred))))
@@ -294,7 +296,8 @@
   :config
   (yas-reload-all))
 
-(use-package yasnippet-snippets)
+(use-package yasnippet-snippets
+  :defer t)
 
 (use-package zenburn-theme
   :config
