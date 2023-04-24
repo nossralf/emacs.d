@@ -21,6 +21,7 @@
  ("emacsmirror-mirror" . "a6e6b495d5ef8954c6cae4d25db9b1519a6d22fa")
  ("emacsql" . "64012261f65fcdd7ea137d1973ef051af1dced42")
  ("epl" . "78ab7a85c08222cd15582a298a364774e3282ce6")
+ ("esup" . "4b49c8d599d4cc0fbf994e9e54a9c78e5ab62a5f")
  ("exec-path-from-shell" . "ddd24dc823de9a94435b4d8ea7569161657f31e2")
  ("expand-region.el" . "b70feaa644310dc2d599dc277cd20a1f2b6446ac")
  ("f.el" . "af7d37c619010b576fd22b50c62c71ff33093f3c")
