@@ -10,6 +10,7 @@
  '(exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
  '(fill-column 79)
  '(forge-topic-list-limit '(60 . 0))
+ '(groovy-indent-offset 2)
  '(gc-cons-threshold 100000000)
  '(git-commit-fill-column 72)
  '(helm-buffers-fuzzy-matching t)
