@@ -192,6 +192,7 @@
   :commands (lsp lsp-deferred)
   :hook  ((go-mode . lsp-deferred)
           (powershell-mode . lsp-deferred)
+          (c-mode . lsp-deferred)
           (lsp-mode . lsp-enable-which-key-integration))
   :init
   (setq read-process-output-max (* 1024 1024)))
