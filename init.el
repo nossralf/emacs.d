@@ -86,7 +86,7 @@
 (use-package better-defaults)
 
 (use-package blacken
-  :hook python-mode)
+  :hook (python-mode . blacken-mode))
 
 (use-package company
   :hook (prog-mode . company-mode)
