@@ -24,6 +24,7 @@
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
+ '(kill-whole-line t)
  '(lsp-keymap-prefix "s-l")
  '(lsp-pwsh-code-formatting-preset "OTBS")
  '(lsp-pyright-multi-root nil)
