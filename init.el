@@ -83,6 +83,10 @@
 (use-package aggressive-indent
   :hook (emacs-lisp-mode . aggressive-indent-mode))
 
+(use-package ansible
+  :commands ansible
+  :hook (yaml-mode . (lambda () (ansible 1))))
+
 (use-package better-defaults)
 
 (use-package blacken
@@ -193,6 +197,7 @@
   :hook  ((go-mode . lsp-deferred)
           (powershell-mode . lsp-deferred)
           (c-mode . lsp-deferred)
+          (ansible . lsp-deferred)
           (lsp-mode . lsp-enable-which-key-integration))
   :init
   (setq read-process-output-max (* 1024 1024)))

@@ -10,6 +10,7 @@
  ("el-get" . "a5ba5852648a90ee0cde9fb5d72e69497d260eec")
  ("eldoc" . "7dd56ba328a126a237115c13f653e5f34fda8989")
  ("elisp-tree-sitter" . "3cfab8a0e945db9b3df84437f27945746a43cc71")
+ ("emacs-ansible" . "d89ac0ee57742cca0f0e0a3453d9dcc521575690")
  ("emacs-async" . "bb0509060ddc9c94bc7db7bddb12995acb3b53e4")
  ("emacs-fish" . "6869efbc05cdb628209338bf57fe52742e53d956")
  ("emacs-htmlize" . "dd27bc3f26efd728f2b1f01f9e4ac4f61f2ffbf9")
