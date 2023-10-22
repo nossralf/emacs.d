@@ -41,7 +41,7 @@
  ("hydra" . "317e1de33086637579a7aeb60f77ed0405bf359b")
  ("js2-mode" . "79bc78d77db0d2e8e43dc0f9e0504ad90bcbc26d")
  ("let-alist" . "0c968ff216a2c91080d79272e85132fef6f14988")
- ("lsp-mode" . "2134ca09245815487f395a4c53000da1082e8823")
+ ("lsp-mode" . "912d446faf4a4de45e4a9fd00cb757acf9b8586f")
  ("lsp-pyright" . "2f2631ae242d5770dbe6cb924e44c1ee5671789d")
  ("magit" . "dd14e0c3c6604f97a447967f0c1ace9947a09e66")
  ("markdown-mode" . "2a0556c5b7dbf29ce437eac6ee9b6636e1b95234")
