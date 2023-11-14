@@ -12,6 +12,7 @@
  ("elisp-tree-sitter" . "3cfab8a0e945db9b3df84437f27945746a43cc71")
  ("emacs-ansible" . "d89ac0ee57742cca0f0e0a3453d9dcc521575690")
  ("emacs-async" . "bb0509060ddc9c94bc7db7bddb12995acb3b53e4")
+ ("emacs-bazel-mode" . "769b30dc18282564d614d7044195b5a0c1a0a5f3")
  ("emacs-fish" . "6869efbc05cdb628209338bf57fe52742e53d956")
  ("emacs-htmlize" . "dd27bc3f26efd728f2b1f01f9e4ac4f61f2ffbf9")
  ("emacs-neotree" . "2b0cb8285352202c62b1e46a8aa265a5e4f9d966")

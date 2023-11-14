@@ -87,6 +87,8 @@
   :commands ansible
   :hook (yaml-mode . (lambda () (ansible 1))))
 
+(use-package bazel)
+
 (use-package better-defaults)
 
 (use-package blacken
