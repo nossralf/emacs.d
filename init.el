@@ -85,7 +85,7 @@
 
 (use-package ansible
   :commands ansible
-  :hook (yaml-mode . (lambda () (ansible 1))))
+  :hook (yaml-mode . ansible))
 
 (use-package bazel)
 
