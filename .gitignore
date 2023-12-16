@@ -18,7 +18,7 @@ network-security.data
 session.*
 transient/
 tramp
-forge-database.sqlite
+forge-database*.sqlite
 .lsp-session-v1
 flycheck_init.el
 history
