@@ -83,9 +83,12 @@
 (use-package aggressive-indent
   :hook (emacs-lisp-mode . aggressive-indent-mode))
 
-(use-package ansible
-  :commands ansible
-  :hook (yaml-mode . ansible))
+(use-package ansible-mode
+  :straight nil
+  :config
+  (defun maybe-ansible-mode ()
+    (if (ansible-project-p) (ansible-mode)))
+  (add-hook 'yaml-mode-hook 'maybe-ansible-mode))
 
 (use-package bazel)
 
@@ -194,15 +197,28 @@
 
 (use-package htmlize)
 
+;; As the lsp function checks for "ansible", we need to redefine it and instead
+;; check for "ansible-mode". This redefinition can replace the original
+;; function via `advice-add'.
+(defun nossralf/lsp-ansible-check-ansible-minor-mode (&rest _)
+  "Check whether ansible minor mode is active.
+This prevents the Ansible server from being turned on in all yaml files."
+  (and (or (derived-mode-p 'yaml-mode)
+           (derived-mode-p 'yaml-ts-mode))
+       ;; emacs-ansible provides ansible, not ansible-mode
+       (with-no-warnings (bound-and-true-p ansible-mode))))
+
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :hook  ((go-mode . lsp-deferred)
           (powershell-mode . lsp-deferred)
           (c-mode . lsp-deferred)
-          (ansible . lsp-deferred)
+          (ansible-mode . lsp-deferred)
           (lsp-mode . lsp-enable-which-key-integration))
   :init
-  (setq read-process-output-max (* 1024 1024)))
+  (setq read-process-output-max (* 1024 1024))
+  :config
+  (advice-add 'lsp-ansible-check-ansible-minor-mode :override #'nossralf/lsp-ansible-check-ansible-minor-mode))
 
 (use-package lsp-pyright
   :defer t
