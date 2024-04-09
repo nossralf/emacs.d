@@ -80,6 +80,8 @@
 
 ;; --- Modes ---
 
+(use-package adoc-mode)
+
 (use-package aggressive-indent
   :hook (emacs-lisp-mode . aggressive-indent-mode))
 

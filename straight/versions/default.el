@@ -1,4 +1,5 @@
-(("aggressive-indent-mode" . "a437a45868f94b77362c6b913c5ee8e67b273c42")
+(("adoc-mode" . "2c2eb8043623aa99d35aacbad2ee39188bf1bad3")
+ ("aggressive-indent-mode" . "a437a45868f94b77362c6b913c5ee8e67b273c42")
  ("better-defaults" . "7d0e56b3a7f84bea6ee2dd9fda09da9df335f89e")
  ("blacken" . "526702ef039c382b0d69c76dd8f6b8f205cb87a1")
  ("closql" . "81f04f60aab27c0d9161746384d4eeb0633202e2")
