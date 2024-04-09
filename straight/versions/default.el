@@ -33,6 +33,7 @@
  ("go-mode.el" . "6f4ff9ef874d151ed8d297a80f1bf27db5d9dbf0")
  ("groovy-emacs-modes" . "7b8520b2e2d3ab1d62b35c426e17ac25ed0120bb")
  ("hardcore-mode.el" . "b1dda19692b4a7a58a689e81784a9b35be39e70d")
+ ("hcl-mode" . "37f2cb1bf6fb51fbf99d4fac256298fcd6d1dd24")
  ("helm" . "d5c01619cdc3d17d3478e82f3e111267a66064eb")
  ("helm-flycheck" . "3cf7d3bb194acacc6395f88360588013d92675d6")
  ("helm-projectile" . "e2e38825c975269a4971df25e79b2ae98929624e")

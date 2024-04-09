@@ -164,6 +164,8 @@
   :config
   (global-hardcore-mode))
 
+(use-package hcl-mode)
+
 (use-package helm
   :bind (("C-x C-b" . helm-buffers-list)
          ("C-x C-d" . helm-browse-project)
