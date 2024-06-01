@@ -133,6 +133,10 @@
 (use-package expand-region
   :bind (("C-=" . er/expand-region)))
 
+(use-package auto-fill-mode
+  :straight (:type built-in)
+  :hook (adoc-mode markdown-mode))
+
 (use-package fish-mode
   :commands fish-mode)
 
