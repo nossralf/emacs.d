@@ -92,6 +92,9 @@
     (if (ansible-project-p) (ansible-mode)))
   (add-hook 'yaml-mode-hook 'maybe-ansible-mode))
 
+(use-package avy
+  :bind (("C-:" . avy-goto-char-timer)))
+
 (use-package bazel)
 
 (use-package better-defaults)
