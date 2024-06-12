@@ -107,10 +107,6 @@
   :bind (:map company-mode-map
               ([remap indent-for-tab-command] . company-indent-or-complete-common)))
 
-(use-package ctrlf
-  :config
-  (ctrlf-mode +1))
-
 (use-package dockerfile-mode
   :commands dockerfile-mode)
 
@@ -139,6 +135,19 @@
 (use-package auto-fill-mode
   :straight (:type built-in)
   :hook (adoc-mode markdown-mode))
+
+(use-package counsel
+  :after ivy
+  :bind (("C-x C-f" . counsel-find-file)
+         ("M-x" . counsel-M-x)
+         ("M-y" . counsel-yank-pop)
+         ("C-x f" . counsel-recentf)
+         ("C-h v" . counsel-describe-variable)
+         ("C-h f" . counsel-describe-function)
+         ("C-x C-b" . counsel-ibuffer)
+         ("C-x b" . counsel-switch-buffer)
+         :map counsel-find-file-map
+         ("C-l" . counsel-up-directory)))
 
 (use-package fish-mode
   :commands fish-mode)
@@ -175,38 +184,11 @@
 
 (use-package hcl-mode)
 
-(use-package helm
-  :bind (("C-x C-b" . helm-buffers-list)
-         ("C-x C-d" . helm-browse-project)
-         ("C-x b" . helm-mini)
-         ("C-x C-f" . helm-find-files)
-         ("C-x f" . helm-recentf)
-         ("M-x" . helm-M-x)
-         ("C-c C-x" . execute-extended-command)
-         ("C-c o" . helm-occur))
-  :config
-  ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
-  ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
-  ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
-  (global-set-key (kbd "C-c h") 'helm-command-prefix)
-  (global-unset-key (kbd "C-x c"))
-  (require 'helm-autoloads)
-  (helm-mode))
-
-(use-package helm-flycheck
-  :defer t
-  :config
-  (eval-after-load 'flycheck
-    '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck)))
-
-(use-package helm-projectile
-  :config
-  (helm-projectile-on))
-
-(use-package helm-rg
-  :defer t)
-
 (use-package htmlize)
+
+(use-package ivy
+  :config
+  (ivy-mode 1))
 
 ;; As the lsp function checks for "ansible", we need to redefine it and instead
 ;; check for "ansible-mode". This redefinition can replace the original
@@ -270,7 +252,7 @@ This prevents the Ansible server from being turned on in all yaml files."
 (use-package projectile
   :bind (:map projectile-mode-map
               ("s-p" . projectile-command-map))
-  :config
+  :init
   (projectile-mode +1))
 
 (use-package protobuf-mode
@@ -285,6 +267,8 @@ This prevents the Ansible server from being turned on in all yaml files."
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
+(use-package rg)
+
 (use-package rjsx-mode
   :commands rjsx-mode)
 
@@ -298,6 +282,9 @@ This prevents the Ansible server from being turned on in all yaml files."
 (use-package subword-mode
   :straight (:type built-in)
   :hook (go-mode python-mode rust-mode))
+
+(use-package swiper
+  :bind (("C-s" . swiper-isearch)))
 
 (use-package symbol-overlay
   :hook (prog-mode . symbol-overlay-mode)
