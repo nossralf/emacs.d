@@ -92,6 +92,10 @@
     (if (ansible-project-p) (ansible-mode)))
   (add-hook 'yaml-mode-hook 'maybe-ansible-mode))
 
+(use-package auto-fill-mode
+  :straight (:type built-in)
+  :hook (adoc-mode markdown-mode org-mode))
+
 (use-package avy
   :bind (("C-:" . avy-goto-char-timer)))
 
@@ -131,10 +135,6 @@
 
 (use-package expand-region
   :bind (("C-=" . er/expand-region)))
-
-(use-package auto-fill-mode
-  :straight (:type built-in)
-  :hook (adoc-mode markdown-mode))
 
 (use-package counsel
   :after ivy
