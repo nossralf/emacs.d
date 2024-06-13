@@ -114,6 +114,9 @@
 (use-package dockerfile-mode
   :commands dockerfile-mode)
 
+(use-package doom-modeline
+  :hook (after-init . doom-modeline-mode))
+
 (use-package erlang
   :commands erlang-mode
   :bind (:map erlang-mode-map
@@ -274,10 +277,6 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package rustic
   :commands rustic-mode)
-
-(use-package smart-mode-line
-  :config
-  (sml/setup))
 
 (use-package subword-mode
   :straight (:type built-in)
