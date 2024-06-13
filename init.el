@@ -97,7 +97,7 @@
   :hook (adoc-mode markdown-mode org-mode))
 
 (use-package avy
-  :bind (("C-:" . avy-goto-char-timer)))
+  :bind (("s-l" . avy-goto-char-timer)))
 
 (use-package bazel)
 
