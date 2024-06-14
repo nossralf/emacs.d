@@ -1,4 +1,4 @@
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
 (setq load-path
@@ -22,6 +22,8 @@
 
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
 
 ;; Use UTF-8 all the time
 (set-terminal-coding-system 'utf-8)
@@ -100,8 +102,6 @@
   :bind (("s-l" . avy-goto-char-timer)))
 
 (use-package bazel)
-
-(use-package better-defaults)
 
 (use-package blacken
   :hook (python-mode . blacken-mode))
@@ -280,6 +280,18 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package rustic
   :commands rustic-mode)
+
+(use-package save-place-mode
+  :straight (:type built-in)
+  :hook (after-init . save-place-mode))
+
+(use-package savehist-mode
+  :straight (:type built-in)
+  :hook (after-init . savehist-mode))
+
+(use-package show-paren-mode
+  :straight (:type built-in)
+  :hook (after-init . show-paren-mode))
 
 (use-package subword-mode
   :straight (:type built-in)

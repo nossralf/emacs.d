@@ -3,7 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(apropos-do-all t)
  '(avy-background t)
+ '(backup-by-copying t)
  '(custom-safe-themes
    '("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default))
  '(display-line-numbers-grow-only t)
@@ -11,15 +13,18 @@
  '(exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
  '(fill-column 79)
  '(forge-topic-list-limit '(60 . 0))
+ '(frame-inhibit-implied-resize t)
  '(gc-cons-threshold 100000000)
  '(git-commit-fill-column 72)
  '(groovy-indent-offset 2)
+ '(indent-tabs-mode nil)
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(ivy-extra-directories nil)
  '(ivy-initial-inputs-alist '())
  '(js-indent-level 2)
  '(kill-whole-line t)
+ '(load-prefer-newer t)
  '(lsp-keymap-prefix "s-l")
  '(lsp-pwsh-code-formatting-preset "OTBS")
  '(lsp-pyright-multi-root nil)
@@ -29,6 +34,7 @@
  '(magit-diff-refine-hunk t)
  '(markdown-command
    "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
+ '(mouse-yank-at-point t)
  '(native-comp-async-report-warnings-errors 'silent)
  '(neo-smart-open t)
  '(neo-theme 'nerd)
@@ -39,6 +45,7 @@
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(rustic-format-trigger 'on-save)
+ '(save-interprogram-paste-before-kill t)
  '(sentence-end-double-space nil)
  '(sml/theme 'respectful)
  '(split-height-threshold 100)
@@ -49,6 +56,7 @@
  '(too-hardcore-return t)
  '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
  '(use-package-verbose t)
+ '(visible-bell t)
  '(whitespace-style '(face empty lines-tail trailing)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
