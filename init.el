@@ -159,8 +159,7 @@
   :commands fish-mode)
 
 (use-package flycheck
-  :config
-  (add-hook 'after-init-hook 'global-flycheck-mode))
+  :hook (after-init . global-flycheck-mode))
 
 (use-package flycheck-color-mode-line
   :hook (flycheck-mode . flycheck-color-mode-line-mode))
