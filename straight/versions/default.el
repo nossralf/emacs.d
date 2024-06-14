@@ -10,6 +10,7 @@
  ("dash.el" . "1de9dcb83eacfb162b6d9a118a4770b1281bcd84")
  ("dockerfile-mode" . "39a012a27fcf6fb629c447d13b6974baf906714c")
  ("doom-modeline" . "11ae6c193cd9cb8d7ff7996058e6df2c0d1e408b")
+ ("editorconfig-emacs" . "1651294334f3987d749eeb287f11d256cf2ba5b1")
  ("el-get" . "f220df34333fdb363b84b28f4ed4a5575341bf45")
  ("eldoc" . "c9f5787b0d2295ecca61067eedbc45039e46da5d")
  ("elisp-tree-sitter" . "3cfab8a0e945db9b3df84437f27945746a43cc71")

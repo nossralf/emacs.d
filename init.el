@@ -117,6 +117,9 @@
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode))
 
+(use-package editorconfig
+  :hook (after-init . editorconfig-mode))
+
 (use-package erlang
   :commands erlang-mode
   :bind (:map erlang-mode-map
