@@ -1,4 +1,5 @@
 (("Emacs-wgrep" . "208b9d01cfffa71037527e3a324684b3ce45ddc4")
+ ("ace-window" . "77115afc1b0b9f633084cf7479c767988106c196")
  ("adoc-mode" . "2c2eb8043623aa99d35aacbad2ee39188bf1bad3")
  ("aggressive-indent-mode" . "a437a45868f94b77362c6b913c5ee8e67b273c42")
  ("avy" . "be612110cb116a38b8603df367942e2bb3d9bdbe")

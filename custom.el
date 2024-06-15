@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(apropos-do-all t)
  '(avy-background t)
+ '(aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
  '(backup-by-copying t)
  '(custom-safe-themes
    '("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default))

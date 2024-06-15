@@ -82,6 +82,9 @@
 
 ;; --- Modes ---
 
+(use-package ace-window
+  :bind (("s-o" . ace-window)))
+
 (use-package adoc-mode)
 
 (use-package aggressive-indent
