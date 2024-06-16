@@ -30,7 +30,6 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (defun nossralf/macos ()
@@ -59,23 +58,23 @@
  ((memq window-system '(mac ns))
   (nossralf/macos)))
 
-(electric-pair-mode +1)
-(global-hl-line-mode)
-(delete-selection-mode +1)
-(global-whitespace-mode)
-
-(if (version< emacs-version "26.1")
-    (add-hook 'prog-mode-hook 'linum-mode)
-  (add-hook 'prog-mode-hook 'display-line-numbers-mode))
-(add-hook 'prog-mode-hook 'column-number-mode)
-(add-hook 'prog-mode-hook 'eldoc-mode)
-
-;; Faster window actions
-(global-set-key (kbd "M-s") 'other-window)
-(global-set-key (kbd "M-1") 'delete-other-windows)
-(global-set-key (kbd "M-2") 'split-window-below)
-(global-set-key (kbd "M-3") 'split-window-right)
-(global-set-key (kbd "M-0") 'delete-window)
+(use-package emacs
+  :straight (:type built-in)
+  :hook ((after-init . electric-pair-mode)
+         (after-init . delete-selection-mode)
+         (after-init . global-hl-line-mode)
+         (after-init . global-whitespace-mode)
+         (before-save . delete-trailing-whitespace)
+         (prog-mode . column-number-mode)
+         (prog-mode . eldoc-mode)
+         (prog-mode . display-line-numbers-mode))
+  :bind (("M-1" . delete-other-windows)
+         ("M-2" . split-window-below)
+         ("M-3" . split-window-right)
+         ("M-0" . delete-window)
+         :map indent-rigidly-map
+         ("s-j" . indent-rigidly-left)
+         ("s-k" . indent-rigidly-right)))
 
 ;; --- Modes ---
 
