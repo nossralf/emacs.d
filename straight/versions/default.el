@@ -8,6 +8,7 @@
  ("company-mode" . "1a0fc12a9c3d25e28c22f319e7b097f435b1c27d")
  ("compat" . "25da9d232399203a38722aa6638b7fe8ecab3f60")
  ("dash.el" . "1de9dcb83eacfb162b6d9a118a4770b1281bcd84")
+ ("diff-hl" . "11f3113e790526d5ee00f61f8e7cd0d01e323b2e")
  ("dockerfile-mode" . "39a012a27fcf6fb629c447d13b6974baf906714c")
  ("doom-modeline" . "11ae6c193cd9cb8d7ff7996058e6df2c0d1e408b")
  ("editorconfig-emacs" . "1651294334f3987d749eeb287f11d256cf2ba5b1")

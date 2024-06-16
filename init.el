@@ -111,6 +111,11 @@
   :bind (:map company-mode-map
               ([remap indent-for-tab-command] . company-indent-or-complete-common)))
 
+(use-package diff-hl
+  :after magit
+  :hook ((after-init . global-diff-hl-mode)
+         (magit-post-refresh . diff-hl-magit-post-refresh)))
+
 (use-package dockerfile-mode
   :commands dockerfile-mode)
 
