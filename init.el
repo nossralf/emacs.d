@@ -111,6 +111,9 @@
   :bind (:map company-mode-map
               ([remap indent-for-tab-command] . company-indent-or-complete-common)))
 
+(use-package crux
+  :bind (("C-k" . crux-smart-kill-line)))
+
 (use-package diff-hl
   :after magit
   :hook ((after-init . global-diff-hl-mode)

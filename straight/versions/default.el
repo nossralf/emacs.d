@@ -7,6 +7,7 @@
  ("closql" . "27b6d2be1a06cdcb5d5fbd77a702b9fbc5082c03")
  ("company-mode" . "1a0fc12a9c3d25e28c22f319e7b097f435b1c27d")
  ("compat" . "25da9d232399203a38722aa6638b7fe8ecab3f60")
+ ("crux" . "6ed75a69f542fb7feab6b8f182caf0924b3fb510")
  ("dash.el" . "1de9dcb83eacfb162b6d9a118a4770b1281bcd84")
  ("diff-hl" . "11f3113e790526d5ee00f61f8e7cd0d01e323b2e")
  ("dockerfile-mode" . "39a012a27fcf6fb629c447d13b6974baf906714c")
