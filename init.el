@@ -115,7 +115,6 @@
   :bind (("C-k" . crux-smart-kill-line)))
 
 (use-package diff-hl
-  :after magit
   :hook ((after-init . global-diff-hl-mode)
          (magit-post-refresh . diff-hl-magit-post-refresh)))
 
