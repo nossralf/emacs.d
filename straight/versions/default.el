@@ -39,6 +39,7 @@
  ("hcl-mode" . "37f2cb1bf6fb51fbf99d4fac256298fcd6d1dd24")
  ("ht.el" . "1c49aad1c820c86f7ee35bf9fff8429502f60fef")
  ("hydra" . "317e1de33086637579a7aeb60f77ed0405bf359b")
+ ("jinx" . "81d0a092b3ca4c5036af45c9411ebbe66eb123ea")
  ("js2-mode" . "9b90d31ed968e5c51bd3e279d4003248ea896807")
  ("let-alist" . "6e9f470e78cf50afa0e53a61da191d68d87a0104")
  ("lsp-mode" . "90ca22eab4938e25999655f89d1dec1856d91f84")

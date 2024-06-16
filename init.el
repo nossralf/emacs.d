@@ -70,9 +70,6 @@
 (add-hook 'prog-mode-hook 'column-number-mode)
 (add-hook 'prog-mode-hook 'eldoc-mode)
 
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
 ;; Faster window actions
 (global-set-key (kbd "M-s") 'other-window)
 (global-set-key (kbd "M-1") 'delete-other-windows)
@@ -197,6 +194,18 @@
 (use-package ivy
   :config
   (ivy-mode 1))
+
+(use-package jinx
+  :hook ((after-init . global-jinx-mode))
+  :bind (("M-$" . jinx-correct)
+         ("s-:" . jinx-correct-all))
+  :config
+  (add-to-list 'jinx-include-faces
+               '(prog-mode font-lock-comment-face
+                           font-lock-doc-face
+                           font-lock-string-face
+                           tree-sitter-hl-face:comment
+                           tree-sitter-hl-face:string)))
 
 ;; As the lsp function checks for "ansible", we need to redefine it and instead
 ;; check for "ansible-mode". This redefinition can replace the original
