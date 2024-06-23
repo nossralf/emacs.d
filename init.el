@@ -258,6 +258,8 @@ This prevents the Ansible server from being turned on in all yaml files."
 (use-package neotree
   :bind (("C-c d" . neotree-toggle)))
 
+(use-package org)
+
 (use-package paredit
   :bind (:map paredit-mode-map
               ("M-{" . paredit-wrap-curly)
