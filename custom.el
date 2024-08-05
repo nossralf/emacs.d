@@ -47,7 +47,6 @@
  '(python-fill-docstring-style 'symmetric)
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
- '(rustic-format-trigger 'on-save)
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)

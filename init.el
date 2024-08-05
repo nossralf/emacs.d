@@ -93,6 +93,9 @@
     (if (ansible-project-p) (ansible-mode)))
   (add-hook 'yaml-mode-hook 'maybe-ansible-mode))
 
+(use-package apheleia
+  :hook (prog-mode . apheleia-mode))
+
 (use-package auto-fill-mode
   :straight (:type built-in)
   :hook (adoc-mode markdown-mode org-mode))
@@ -101,9 +104,6 @@
   :bind (("s-l" . avy-goto-char-timer)))
 
 (use-package bazel)
-
-(use-package blacken
-  :hook (python-mode . blacken-mode))
 
 (use-package company
   :hook (prog-mode . company-mode)
