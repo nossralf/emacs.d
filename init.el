@@ -110,6 +110,19 @@
   :bind (:map company-mode-map
               ([remap indent-for-tab-command] . company-indent-or-complete-common)))
 
+(use-package counsel
+  :after ivy
+  :bind (("C-x C-f" . counsel-find-file)
+         ("M-x" . counsel-M-x)
+         ("M-y" . counsel-yank-pop)
+         ("C-x f" . counsel-recentf)
+         ("C-h v" . counsel-describe-variable)
+         ("C-h f" . counsel-describe-function)
+         ("C-x C-b" . counsel-ibuffer)
+         ("C-x b" . counsel-switch-buffer)
+         :map counsel-find-file-map
+         ("C-l" . counsel-up-directory)))
+
 (use-package crux
   :bind (("C-k" . crux-smart-kill-line)))
 
@@ -147,19 +160,6 @@
 
 (use-package expand-region
   :bind (("C-=" . er/expand-region)))
-
-(use-package counsel
-  :after ivy
-  :bind (("C-x C-f" . counsel-find-file)
-         ("M-x" . counsel-M-x)
-         ("M-y" . counsel-yank-pop)
-         ("C-x f" . counsel-recentf)
-         ("C-h v" . counsel-describe-variable)
-         ("C-h f" . counsel-describe-function)
-         ("C-x C-b" . counsel-ibuffer)
-         ("C-x b" . counsel-switch-buffer)
-         :map counsel-find-file-map
-         ("C-l" . counsel-up-directory)))
 
 (use-package fish-mode
   :commands fish-mode)
