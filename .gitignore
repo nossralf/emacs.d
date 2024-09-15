@@ -27,3 +27,4 @@ history
 .cache
 undo
 eln-cache
+/tree-sitter
