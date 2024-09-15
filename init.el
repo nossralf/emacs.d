@@ -325,9 +325,6 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package systemd)
 
-(use-package toml-mode
-  :mode "\\.toml\\'")
-
 (use-package tree-sitter
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
   :init

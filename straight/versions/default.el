@@ -76,7 +76,6 @@
  ("swiper" . "8dc02d5b725f78d1f80904807b46f5406f129674")
  ("symbol-overlay" . "6151f4279bd94b5960149596b202cdcb45cacec2")
  ("systemd-mode" . "8742607120fbc440821acbc351fda1e8e68a8806")
- ("toml-mode.el" . "f6c61817b00f9c4a3cab1bae9c309e0fc45cdd06")
  ("transient" . "5a41cd581e051fb5acf0444b02b926070073b89f")
  ("tree-sitter-langs" . "886d8c899d09bce84a3ca7586467795d7bf37523")
  ("treepy.el" . "75fe3ec37e6f9b2bdfd6d0584efd984d0c00a43e")
