@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+mkdir -p tree-sitter
+
+fd . 'straight/build/tree-sitter-langs/bin' -e dylib -x cp {} tree-sitter/libtree-sitter-{/.}.dylib
