@@ -82,6 +82,7 @@
  ("undo-tree" . "d8f72bbe7d3c3a2808986febd3bb1a46d4da7f51")
  ("unfill" . "1516baa1a83d3cebd619c42a79b9dcf06ef5ffa6")
  ("use-package" . "a6e856418d2ebd053b34e0ab2fda328abeba731c")
+ ("web-mode" . "0c83581d1e93d1d802c730a1d5e90cd1c740e1b2")
  ("with-editor" . "77cb2403158cfea9d8bfb8adad81b84d1d6d7c6a")
  ("xref" . "03bbbf88dc2f358cfb9662b7fe3493d3fd8f482a")
  ("xterm-color" . "2ad407c651e90fff2ea85d17bf074cee2c022912")
