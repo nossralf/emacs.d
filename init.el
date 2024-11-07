@@ -339,6 +339,8 @@ This prevents the Ansible server from being turned on in all yaml files."
 (use-package unfill
   :bind (("M-Q" . unfill-paragraph)))
 
+(use-package vala-mode)
+
 (use-package web-mode)
 
 (use-package which-key

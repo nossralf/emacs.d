@@ -82,6 +82,7 @@
  ("undo-tree" . "d8f72bbe7d3c3a2808986febd3bb1a46d4da7f51")
  ("unfill" . "1516baa1a83d3cebd619c42a79b9dcf06ef5ffa6")
  ("use-package" . "a6e856418d2ebd053b34e0ab2fda328abeba731c")
+ ("vala-mode" . "d696a8177e94c81ea557ad364a3b3dcc3abbc50f")
  ("web-mode" . "0c83581d1e93d1d802c730a1d5e90cd1c740e1b2")
  ("with-editor" . "77cb2403158cfea9d8bfb8adad81b84d1d6d7c6a")
  ("xref" . "e459adf707d336a7a312405b2a191a30d0fab087")
