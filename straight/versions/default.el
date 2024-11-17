@@ -46,6 +46,7 @@
  ("let-alist" . "8141e7c941105c92e89bba44e73aae6cdd962b49")
  ("lsp-mode" . "9b104105adecf637188f4e3bf5cc228bda12374a")
  ("lsp-pyright" . "dd54b3ae7c22d34faaced7b1a89739063c552b1f")
+ ("lua-mode" . "d074e4134b1beae9ed4c9b512af741ca0d852ba3")
  ("magit" . "1c30bb1f9fb0668ec385fc3fb899b30d5507fad8")
  ("markdown-mode" . "6f59f72ca040f0199aa72f1ae4f6c364de61cac0")
  ("melpa" . "f164afd56fe77159209247c648c8f3adc21067dc")

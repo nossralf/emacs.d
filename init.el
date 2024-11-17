@@ -242,6 +242,8 @@ This prevents the Ansible server from being turned on in all yaml files."
                          (require 'lsp-pyright)
                          (lsp-deferred))))
 
+(use-package lua-mode)
+
 (use-package magit
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)
