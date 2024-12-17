@@ -173,10 +173,6 @@
 (use-package forge
   :after magit)
 
-(use-package git-commit
-  :defer t
-  :hook (git-commit-mode . flyspell-mode))
-
 (use-package go-mode
   :commands go-mode
   :config
@@ -248,7 +244,8 @@ This prevents the Ansible server from being turned on in all yaml files."
   :bind (("M-g b" . magit-blame)
          ("M-g d" . magit-diff)
          ("M-g l" . magit-log)
-         ("M-g s" . magit-status)))
+         ("M-g s" . magit-status))
+  :hook (git-commit-mode . flyspell-mode))
 
 (use-package markdown-mode
   :mode  "\\.md\\'")
