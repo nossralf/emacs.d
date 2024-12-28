@@ -209,6 +209,9 @@
                            tree-sitter-hl-face:comment
                            tree-sitter-hl-face:string)))
 
+(use-package lsp-java
+  :hook (java-mode . lsp-deferred))
+
 ;; As the lsp function checks for "ansible", we need to redefine it and instead
 ;; check for "ansible-mode". This redefinition can replace the original
 ;; function via `advice-add'.

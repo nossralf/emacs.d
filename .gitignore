@@ -28,3 +28,6 @@ history
 undo
 eln-cache
 /tree-sitter
+.dap-breakpoints
+/eclipse.jdt.ls
+/workspace
