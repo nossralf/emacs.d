@@ -27,6 +27,7 @@
  '(js-indent-level 2)
  '(kill-whole-line t)
  '(load-prefer-newer t)
+ '(lsp-booster-io-only t)
  '(lsp-keymap-prefix "s-l")
  '(lsp-pwsh-code-formatting-preset "OTBS")
  '(lsp-pyright-multi-root nil)

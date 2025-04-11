@@ -235,6 +235,11 @@ This prevents the Ansible server from being turned on in all yaml files."
   :config
   (advice-add 'lsp-ansible-check-ansible-minor-mode :override #'nossralf/lsp-ansible-check-ansible-minor-mode))
 
+(use-package lsp-booster
+  :straight nil
+  :after lsp-mode
+  :config (lsp-booster-mode))
+
 (use-package lsp-pyright
   :defer t
   :hook (python-mode . (lambda ()
