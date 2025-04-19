@@ -321,7 +321,7 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package subword-mode
   :straight (:type built-in)
-  :hook (go-mode python-mode rust-mode))
+  :hook (go-mode powershell-mode python-mode rust-mode))
 
 (use-package swiper
   :bind (("C-s" . swiper-isearch)))
