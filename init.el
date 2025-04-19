@@ -209,6 +209,9 @@
                            tree-sitter-hl-face:comment
                            tree-sitter-hl-face:string)))
 
+(use-package kotlin-ts-mode
+  :mode "\\.kts?\\'")
+
 (use-package lsp-java
   :hook (java-mode . lsp-deferred))
 

@@ -23,6 +23,7 @@
  ("emacs-bazel-mode" . "769b30dc18282564d614d7044195b5a0c1a0a5f3")
  ("emacs-fish" . "2526b1803b58cf145bc70ff6ce2adb3f6c246f89")
  ("emacs-htmlize" . "8e3841c837b4b78bd72ad7f0436e919f39315a46")
+ ("emacs-kotlin-ts-mode" . "a25d56cecac9160ba7c140f982ec16ca7b2fe97f")
  ("emacs-neotree" . "4a4cd8576157a39c0fdb478a2887c01ccfe1aec9")
  ("emacs-python-isort" . "8b4948b7fcad90fc9b72f69f4653260bd21f62c3")
  ("emacs-reformatter" . "6ac08cebafb9e04b825ed22d82269ff69cc5f87f")
