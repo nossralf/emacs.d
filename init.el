@@ -79,7 +79,8 @@
 ;; --- Modes ---
 
 (use-package ace-window
-  :bind (("s-o" . ace-window)))
+  :bind (("s-o" . ace-window))
+  :config (set-face-attribute 'aw-leading-char-face nil :height 300))
 
 (use-package adoc-mode)
 
