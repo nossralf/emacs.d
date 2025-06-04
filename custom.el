@@ -28,6 +28,7 @@
  '(kill-whole-line t)
  '(load-prefer-newer t)
  '(lsp-booster-io-only t)
+ '(lsp-java-jdt-download-url "https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.47.0/jdt-language-server-1.47.0-202505151856.tar.gz")
  '(lsp-keymap-prefix "s-l")
  '(lsp-pwsh-code-formatting-preset "OTBS")
  '(lsp-pyright-multi-root nil)
