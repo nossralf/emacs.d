@@ -258,7 +258,9 @@ This prevents the Ansible server from being turned on in all yaml files."
          ("M-g d" . magit-diff)
          ("M-g l" . magit-log)
          ("M-g s" . magit-status))
-  :hook (git-commit-mode . flyspell-mode))
+  :hook (git-commit-mode . flyspell-mode)
+  :init
+  (if (eq window-system 'mac) (advice-add 'with-editor-locate-emacsclient :override (lambda () "Always return nil." nil))))
 
 (use-package markdown-mode
   :mode  "\\.md\\'")
