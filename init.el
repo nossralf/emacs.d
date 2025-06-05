@@ -234,6 +234,7 @@ This prevents the Ansible server from being turned on in all yaml files."
           (c-mode . lsp-deferred)
           (ansible-mode . lsp-deferred)
           (lsp-mode . lsp-enable-which-key-integration))
+  :bind (("s-." . lsp-execute-code-action))
   :init
   (setq read-process-output-max (* 1024 1024))
   :config
