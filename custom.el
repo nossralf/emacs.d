@@ -36,6 +36,7 @@
  '(mac-command-modifier 'super)
  '(mac-option-modifier 'meta)
  '(magit-diff-refine-hunk t)
+ '(magit-git-executable "/opt/homebrew/bin/git")
  '(major-mode-remap-alist '((conf-toml-mode . toml-ts-mode)))
  '(markdown-command
    "pandoc --from commonmark --to html5 --highlight-style pygments --standalone")
