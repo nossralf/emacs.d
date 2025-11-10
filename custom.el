@@ -65,7 +65,7 @@
  '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
  '(use-package-verbose t)
  '(visible-bell t)
- '(whitespace-style '(face empty lines-tail trailing))
+ '(whitespace-style '(face trailing))
  '(with-editor-emacsclient-executable nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
