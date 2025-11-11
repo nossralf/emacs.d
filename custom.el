@@ -56,7 +56,7 @@
  '(sentence-end-double-space nil)
  '(sml/theme 'respectful)
  '(split-height-threshold 100)
- '(straight-check-for-modifications '(watch-files))
+ '(straight-check-for-modifications nil)
  '(straight-use-package-by-default t)
  '(straight-vc-git-default-clone-depth 1)
  '(too-hardcore-backspace t)
