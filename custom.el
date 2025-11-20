@@ -62,7 +62,6 @@
  '(too-hardcore-backspace t)
  '(too-hardcore-return t)
  '(tool-bar-mode nil)
- '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
  '(use-package-verbose t)
  '(visible-bell t)
  '(whitespace-style '(face trailing))

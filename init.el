@@ -3,7 +3,7 @@
 
 (setq load-path
       (append (delete-dups load-path)
-              '("~/.emacs.d/lisp")))
+              (list (expand-file-name "lisp" user-emacs-directory))))
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -347,6 +347,8 @@ This prevents the Ansible server from being turned on in all yaml files."
 (use-package tree-sitter-langs)
 
 (use-package undo-tree
+  :init
+  (setq undo-tree-history-directory-alist (list (cons "." (expand-file-name "undo" user-emacs-directory))))
   :config
   (global-undo-tree-mode))
 
