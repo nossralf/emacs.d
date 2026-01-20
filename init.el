@@ -353,7 +353,7 @@ This prevents the Ansible server from being turned on in all yaml files."
   (global-undo-tree-mode))
 
 (use-package unfill
-  :bind (("M-Q" . unfill-paragraph)))
+  :bind (("M-q" . unfill-toggle)))
 
 (use-package vala-mode)
 
