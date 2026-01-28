@@ -257,7 +257,6 @@ This prevents the Ansible server from being turned on in all yaml files."
   :config (lsp-booster-mode))
 
 (use-package lsp-pyright
-  :defer t
   :hook (python-mode . (lambda ()
                          (require 'lsp-pyright)
                          (lsp-deferred))))
@@ -281,7 +280,6 @@ This prevents the Ansible server from being turned on in all yaml files."
   :hook (emacs-lisp-mode . paredit-mode))
 
 (use-package popwin
-  :defer t
   :config
   (popwin-mode 1))
 
@@ -371,8 +369,7 @@ This prevents the Ansible server from being turned on in all yaml files."
   :config
   (yas-reload-all))
 
-(use-package yasnippet-snippets
-  :defer t)
+(use-package yasnippet-snippets)
 
 (use-package zenburn-theme
   :config
