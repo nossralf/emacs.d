@@ -78,6 +78,17 @@
 
 ;; --- Modes ---
 
+(use-package org)
+
+(use-package magit
+  :bind (("M-g b" . magit-blame)
+         ("M-g d" . magit-diff)
+         ("M-g l" . magit-log)
+         ("M-g s" . magit-status))
+  :hook (git-commit-mode . flyspell-mode)
+  :init
+  (if (eq window-system 'mac) (advice-add 'with-editor-locate-emacsclient :override (lambda () "Always return nil." nil))))
+
 (use-package ace-window
   :bind (("s-o" . ace-window))
   :config (set-face-attribute 'aw-leading-char-face nil :height 300))
@@ -253,15 +264,6 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package lua-mode)
 
-(use-package magit
-  :bind (("M-g b" . magit-blame)
-         ("M-g d" . magit-diff)
-         ("M-g l" . magit-log)
-         ("M-g s" . magit-status))
-  :hook (git-commit-mode . flyspell-mode)
-  :init
-  (if (eq window-system 'mac) (advice-add 'with-editor-locate-emacsclient :override (lambda () "Always return nil." nil))))
-
 (use-package markdown-mode
   :mode  "\\.md\\'")
 
@@ -271,8 +273,6 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package neotree
   :bind (("C-c d" . neotree-toggle)))
-
-(use-package org)
 
 (use-package paredit
   :bind (:map paredit-mode-map
