@@ -95,6 +95,8 @@
 
 (use-package adoc-mode)
 
+(use-package agent-shell)
+
 (use-package aggressive-indent
   :hook (emacs-lisp-mode . aggressive-indent-mode))
 
