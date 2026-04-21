@@ -38,6 +38,7 @@
  '(lsp-pyright-langserver-command "basedpyright")
  '(lsp-pyright-multi-root nil)
  '(lsp-rust-server 'rust-analyzer)
+ '(lsp-semantic-tokens-enable t)
  '(mac-command-modifier 'super)
  '(mac-option-modifier 'meta)
  '(magit-diff-refine-hunk t)
