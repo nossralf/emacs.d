@@ -49,6 +49,7 @@
  '(neo-smart-open t)
  '(neo-theme 'nerd)
  '(nxml-child-indent 4)
+ '(org-agenda-files '("~/Notes"))
  '(org-src-fontify-natively t)
  '(projectile-completion-system 'ivy)
  '(python-fill-docstring-style 'symmetric)
