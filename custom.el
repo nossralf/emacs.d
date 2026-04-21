@@ -31,7 +31,8 @@
  '(kill-whole-line t)
  '(load-prefer-newer t)
  '(lsp-booster-io-only t)
- '(lsp-java-jdt-download-url "https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.47.0/jdt-language-server-1.47.0-202505151856.tar.gz")
+ '(lsp-java-jdt-download-url
+   "https://download.eclipse.org/jdtls/milestones/1.58.0/jdt-language-server-1.58.0-202604151538.tar.gz")
  '(lsp-keymap-prefix "s-l")
  '(lsp-pwsh-code-formatting-preset "OTBS")
  '(lsp-pyright-langserver-command "basedpyright")
