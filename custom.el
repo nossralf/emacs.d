@@ -13,6 +13,7 @@
  '(display-line-numbers-grow-only t)
  '(display-line-numbers-width-start t)
  '(exec-path-from-shell-variables '("PATH" "MANPATH" "PKG_CONFIG_PATH"))
+ '(ffap-machine-p-known 'reject)
  '(fill-column 79)
  '(forge-topic-list-limit '(60 . 0))
  '(frame-inhibit-implied-resize t)
