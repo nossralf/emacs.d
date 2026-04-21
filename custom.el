@@ -25,7 +25,7 @@
  '(inhibit-startup-echo-area-message "")
  '(inhibit-startup-screen t)
  '(ivy-extra-directories nil)
- '(ivy-initial-inputs-alist '())
+ '(ivy-initial-inputs-alist nil)
  '(js-indent-level 2)
  '(kill-do-not-save-duplicates t)
  '(kill-whole-line t)
