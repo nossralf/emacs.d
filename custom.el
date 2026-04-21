@@ -25,6 +25,7 @@
  '(ivy-extra-directories nil)
  '(ivy-initial-inputs-alist '())
  '(js-indent-level 2)
+ '(kill-do-not-save-duplicates t)
  '(kill-whole-line t)
  '(load-prefer-newer t)
  '(lsp-booster-io-only t)
