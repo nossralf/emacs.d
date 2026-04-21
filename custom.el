@@ -7,6 +7,7 @@
  '(avy-background t)
  '(aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
  '(backup-by-copying t)
+ '(bidi-paragraph-direction 'left-to-right)
  '(custom-safe-themes
    '("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default))
  '(display-line-numbers-grow-only t)
