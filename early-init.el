@@ -1,7 +1,9 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (setq package-enable-at-startup nil
-      frame-title-format nil)
+      frame-title-format nil
+      bidi-inhibit-bpa t
+      redisplay-skip-fontification-on-input t)
 
 ;; Hard-code locale to en_US.UTF-8 because my language settings in macOS end up
 ;; as en_SE.UTF-8 which doesn't exist in /usr/share/locale and that causes
