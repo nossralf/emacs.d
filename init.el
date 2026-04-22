@@ -246,7 +246,8 @@ This prevents the Ansible server from being turned on in all yaml files."
           (powershell-mode . lsp-deferred)
           (c-mode . lsp-deferred)
           (ansible-mode . lsp-deferred)
-          (lsp-mode . lsp-enable-which-key-integration))
+          (lsp-mode . lsp-enable-which-key-integration)
+          (typescript-ts-mode . lsp-deferred))
   :bind (("s-." . lsp-execute-code-action))
   :init
   (setq read-process-output-max (* 1024 1024))
@@ -328,7 +329,7 @@ This prevents the Ansible server from being turned on in all yaml files."
 
 (use-package subword-mode
   :straight (:type built-in)
-  :hook (go-mode powershell-mode python-mode rust-mode))
+  :hook (go-mode powershell-mode python-mode rust-mode typescript-ts-mode))
 
 (use-package swiper
   :bind (("C-s" . swiper-isearch)))
@@ -345,6 +346,10 @@ This prevents the Ansible server from being turned on in all yaml files."
   (global-tree-sitter-mode))
 
 (use-package tree-sitter-langs)
+
+(use-package typescript-ts-mode
+  :straight (:type built-in)
+  :mode "\\.ts\\'")
 
 (use-package undo-tree
   :init
