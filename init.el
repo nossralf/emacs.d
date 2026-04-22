@@ -250,7 +250,7 @@ This prevents the Ansible server from being turned on in all yaml files."
           (typescript-ts-mode . lsp-deferred))
   :bind (("s-." . lsp-execute-code-action))
   :init
-  (setq read-process-output-max (* 1024 1024))
+  (setq read-process-output-max (* 4 1024 1024))
   :config
   (advice-add 'lsp-ansible-check-ansible-minor-mode :override #'nossralf/lsp-ansible-check-ansible-minor-mode))
 
