@@ -196,6 +196,16 @@
               (add-hook 'before-save-hook 'lsp-format-buffer nil 'local)
               (add-hook 'before-save-hook 'lsp-organize-imports nil 'local))))
 
+
+(when (bound-and-true-p job-computer)
+  (use-package gptel
+    :config
+    (setq gptel-backend (gptel-make-gh-copilot "Copilot"))
+    :custom
+    (gptel-max-tokens 8000)
+    (gptel-model 'claude-opus-4.6)
+    ))
+
 (use-package groovy-mode
   :commands groovy-mode)
 
