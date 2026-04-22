@@ -212,7 +212,7 @@
   (ivy-mode 1))
 
 (use-package jinx
-  :hook ((after-init . global-jinx-mode))
+  :hook ((emacs-startup . global-jinx-mode))
   :bind (("M-$" . jinx-correct)
          ("s-:" . jinx-correct-all))
   :config
